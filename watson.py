@@ -11,11 +11,11 @@ import sys
 import random
 
 alumnos = { 
-            'Lucas' : {'Cantidad de consultas' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
-            'Pablo' : {'Cantidad de consultas' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
-            'Luis' : {'Cantidad de consultas' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
-            'Mateo' : {'Cantidad de consultas' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
-            'Florencia' : {'Cantidad de consultas' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0]
+            'Lucas' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
+            'Pablo' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0,'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
+            'Luis' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0,'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
+            'Mateo' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
+            'Florencia' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0]
           }         
 #alumnos = dict()
 
@@ -30,6 +30,13 @@ CANTIDAD_PREGUNTAS_EXAMEN = 6
 def agregarAlumno(alumnoNuevo) :
     perfilNuevo = {
                     'Cantidad de consultas' : 0, 
+                    'Consulta anterior' : 'tema 1',
+                    'Cantidad de consultas tema 1' : 0,
+                    'Cantidad de consultas tema 2' : 0,
+                    'Cantidad de consultas tema 3' : 0,
+                    'Cantidad de consultas tema 4' : 0, 
+                    'Cantidad de consultas tema 5' : 0, 
+                    'Cantidad de consultas tema 6' : 0,
                     'Promedio de entendimiento' : 0, 
                     'Examenes intentados' : 0, 
                     'Examenes aprobados' : 0, 
@@ -108,6 +115,10 @@ def main(dict):
         alumnos[dict['nombre']]['Cantidad de entradas al chat'] += 1
         saludo = {'message' : "¡Un gusto " +  dict['nombre'] + "!"}
         return saludo
+     
+    if dict['consulta anterior'] ==1:
+       saludo = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['consulta anterior']] + "¿quéres hacer una evaluacion sobre ese tema de forma de respaso?"}
+        return saludo
         
     if dict['temas'] == 1:
         temas = {'message' : materia['temas_materia']}
@@ -116,7 +127,37 @@ def main(dict):
     if dict['consulta'] == 1:
         alumnos[dict['nombre']]['Cantidad de consultas'] += 1
         return dict()
+    
+    if dict['El problema del cambio climático'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 1'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 1'
+        return dict()
+    
+    if dict['Las causas del cambio climático'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 2'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 2'
+        return dict()
         
+    if dict['El impacto social del cambio climático'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 3'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 3'
+        return dict()
+        
+    if dict['El impacto en la salud humana del cambio climatico'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 4'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 4'
+        return dict()
+        
+    if dict['El impacto demográfico del cambio climatico'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 5'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 5'
+        return dict()
+    
+    if dict['El impacto en la organización social del cambio climatico'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 6'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 6'
+        return dict()
+    
     if dict['bibliografia'] == 1:
         bibliografia = {'message' : materia['bibliografia']}
         return bibliografia
