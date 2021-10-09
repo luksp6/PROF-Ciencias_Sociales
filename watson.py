@@ -133,6 +133,12 @@ def generarEvaluacion():
                 'pregunta6' : {'pregunta' : preguntasExamen['pregunta6'][p6], 'opciones' : opcionesExamen['pregunta6'][p6], 'respuesta' : respuestasExamen['pregunta6'][p6]}, 
            }
 
+def generarNotaConcepto(alum):
+    if [alumnos[alum]]['Cantidad de consultas'] >=10 and [alumnos[alum]]['Cantidad de entradas al chat'] >= 10:
+     return true
+    else: 
+     return false
+
 def corregirRespuestas(respuestas, examen):
     correccionResp = dict()
     correccionResp['cont'] = 0
@@ -148,11 +154,24 @@ def corregirRespuestas(respuestas, examen):
     
 def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
     correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6], examen)
-    if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN:
-        correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"
-        alumnos[alum]['Examenes aprobados'] += 1
+    if correccion['cont'] < CANTIDAD_PREGUNTAS_EXAMEN-2:
+       correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
     else:
-        correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
+       if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN-2 and generarNotaConcepto(alum) == true:
+             correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!" + "Pero ojo pero un punto fue de concepto, por tu participacion, ¡a estudiar un poco mas!"
+       else:
+            if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN-2 and generarNotaConcepto(alum) == false:
+              correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
+            else:
+                if correccion['cont'] >= CANTIDAD_PREGUNTAS_EXAMEN-1: 
+                   correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"              
+    # este es el que se probo y anduvo
+    #    alumnos[alum]['Examenes aprobados'] += 1      
+   # if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN:
+    #    correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"
+    #    alumnos[alum]['Examenes aprobados'] += 1
+    #else:
+    #    correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
     alumnos[alum]['Promedio de errores en examen'] += ((CANTIDAD_PREGUNTAS_EXAMEN - correccion['cont']) / (alumnos[alum]['Examenes intentados'] + (alumnos[alum]['Examenes intentados'] - 1)))
     return correccion
 
@@ -167,12 +186,44 @@ def main(dict):
     if dict['temas'] == 1:
         temas = {'message' : materia['temas_materia']}
         return temas
+    
+    if dict['consulta anterior'] ==1:
+       saludo = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['consulta anterior']] + "¿quéres hacer una evaluacion sobre ese tema de forma de respaso?"}
+        return saludo    
         
     if dict['consulta'] == 1:
         alumnos[dict['nombre']]['Cantidad de consultas'] += 1
         return dict()
         
-    
+    if dict['El problema del cambio climático'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 1'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 1'
+        return dict()
+
+    if dict['Las causas del cambio climático'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 2'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 2'
+        return dict()
+
+    if dict['El impacto social del cambio climático'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 3'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 3'
+        return dict()
+
+    if dict['El impacto en la salud humana del cambio climatico'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 4'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 4'
+        return dict()
+
+    if dict['El impacto demográfico del cambio climatico'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 5'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 5'
+        return dict()
+
+    if dict['El impacto en la organización social del cambio climatico'] = 1:
+        alumnos[dict['nombre']]['Cantidad de consultas tema 6'] += 1
+        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 6'
+        return dict()
         
     if dict['bibliografia'] == 1:
         bibliografia = {'message' : materia['bibliografia']}
