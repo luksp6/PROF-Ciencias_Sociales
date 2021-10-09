@@ -16,14 +16,12 @@ alumnos = {
             'Luis' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0,'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
             'Mateo' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0}, 
             'Florencia' : {'Cantidad de consultas' : 0, 'Consulta anterior' : 'tema 1', 'Cantidad de consultas tema 1' : 0, 'Cantidad de consultas tema 2' : 0, 'Cantidad de consultas tema 3' : 0, 'Cantidad de consultas tema 4' : 0, 'Cantidad de consultas tema 5' : 0, 'Cantidad de consultas tema 6' : 0, 'Promedio de entendimiento' : 0, 'Examenes intentados' : 0, 'Examenes aprobados' : 0, 'Promedio de errores en examen' : 0, 'Cantidad de entradas al chat' : 0]
-          }         
-#alumnos = dict()
+          }
 
-#materia = {
-#                'temas_materia' : "Los temas de nuestra clase son: \n | El problema del cambio climático. \n | Las causas del cambio climático. \n | El impacto social del cambio climático. \n | El impacto en la salud humana del cambio climático. \n | El impacto demográfico del cambio climático. \n | El impacto económico del cambio climático. \n | Las soluciones al problema del cambio climático. ", 
-#                'bibliografia' : "| Fuente: Pardo Buendía, M. (2007). El impacto social del cambio climático. \n | Link: https://e-archivo.uc3m.es/bitstream/handle/10016/10448/impacto_pardo_2007.pdf?sequence=1&isAllowed=y"
-#          }
-materia = {'temas_materia' : "asd"}
+materia = {
+                'temas_materia' : "Los temas de nuestra clase son: \n | El problema del cambio climático. \n | Las causas del cambio climático. \n | El impacto social del cambio climático. \n | El impacto en la salud humana del cambio climático. \n | El impacto demográfico del cambio climático. \n | El impacto económico del cambio climático. \n | Las soluciones al problema del cambio climático. ", 
+                'bibliografia' : "| Fuente: Pardo Buendía, M. (2007). El impacto social del cambio climático. \n | Link: https://e-archivo.uc3m.es/bitstream/handle/10016/10448/impacto_pardo_2007.pdf?sequence=1&isAllowed=y"
+          }
 
 CANTIDAD_PREGUNTAS_EXAMEN = 6 
 
@@ -46,28 +44,77 @@ def agregarAlumno(alumnoNuevo) :
     alumnos[alumnoNuevo] = perfilNuevo
 
 preguntasExamen = {
-                    'pregunta1' : {'alternativa0' : "", 'alternativa1' : "", 'alternativa2' : ""}, 
-                    'pregunta2' : {'alternativa0' : "", 'alternativa1' : "", 'alternativa2' : ""}, 
-                    'pregunta3' : {'alternativa0' : "", 'alternativa1' : "", 'alternativa2' : ""}, 
-                    'pregunta4' : {'alternativa0' : "", 'alternativa1' : "", 'alternativa2' : ""}, 
-                    'pregunta5' : {'alternativa0' : "", 'alternativa1' : "", 'alternativa2' : ""}, 
-                    'pregunta6' : {'alternativa0' : "", 'alternativa1' : "", 'alternativa2' : ""}
+                    'pregunta1' : {'alternativa0' : "pregunta1 alternativa0", 'alternativa1' : "pregunta1 alternativa1", 'alternativa2' : "pregunta1 alternativa2"}, 
+                    'pregunta2' : {'alternativa0' : "pregunta2 alternativa0", 'alternativa1' : "pregunta2 alternativa1", 'alternativa2' : "pregunta2 alternativa2"}, 
+                    'pregunta3' : {'alternativa0' : "pregunta3 alternativa0", 'alternativa1' : "pregunta3 alternativa1", 'alternativa2' : "pregunta3 alternativa2"}, 
+                    'pregunta4' : {'alternativa0' : "pregunta4 alternativa0", 'alternativa1' : "pregunta4 alternativa1", 'alternativa2' : "pregunta4 alternativa2"}, 
+                    'pregunta5' : {'alternativa0' : "pregunta5 alternativa0", 'alternativa1' : "pregunta5 alternativa1", 'alternativa2' : "pregunta5 alternativa2"}, 
+                    'pregunta6' : {'alternativa0' : "pregunta6 alternativa0", 'alternativa1' : "pregunta6 alternativa1", 'alternativa2' : "pregunta6 alternativa1"}
                   }
 opcionesExamen = {
-                    'pregunta1' : {'alternativa0' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa1' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa2' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}}, 
-                    'pregunta2' : {'alternativa0' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa1' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa2' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}}, 
-                    'pregunta3' : {'alternativa0' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa1' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa2' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}}, 
-                    'pregunta4' : {'alternativa0' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa1' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa2' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}}, 
-                    'pregunta5' : {'alternativa0' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa1' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa2' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}}, 
-                    'pregunta6' : {'alternativa0' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa1' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}, 'alternativa2' : {'opcionA' : "a. ", 'opcionB' : "b. ", 'opcionC' : "c. "}}
+                    'pregunta1' : {
+                                    'alternativa0' : {'opcionA' : "pregunta1 alternativa0 opcionA", 'opcionB' : "pregunta1 alternativa0 opcionB", 'opcionC' : "pregunta1 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta1 alternativa1 opcionA", 'opcionB' : "pregunta1 alternativa1 opcionB", 'opcionC' : "pregunta1 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta1 alternativa2 opcionA", 'opcionB' : "pregunta1 alternativa2 opcionB", 'opcionC' : "pregunta1 alternativa2 opcionC"}
+                                  }, 
+                    'pregunta2' : {
+                                    'alternativa0' : {'opcionA' : "pregunta2 alternativa0 opcionA", 'opcionB' : "pregunta2 alternativa0 opcionB", 'opcionC' : "pregunta2 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta2 alternativa1 opcionA", 'opcionB' : "pregunta2 alternativa1 opcionB", 'opcionC' : "pregunta2 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta2 alternativa2 opcionA", 'opcionB' : "pregunta2 alternativa2 opcionB", 'opcionC' : "pregunta2 alternativa2 opcionC"}
+                                  }, 
+                    'pregunta3' : {
+                                    'alternativa0' : {'opcionA' : "pregunta3 alternativa0 opcionA", 'opcionB' : "pregunta3 alternativa0 opcionB", 'opcionC' : "pregunta3 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta3 alternativa1 opcionA", 'opcionB' : "pregunta3 alternativa1 opcionB", 'opcionC' : "pregunta3 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta3 alternativa2 opcionA", 'opcionB' : "pregunta3 alternativa2 opcionB", 'opcionC' : "pregunta3 alternativa2 opcionC"}
+                                  }, 
+                    'pregunta4' : {
+                                    'alternativa0' : {'opcionA' : "pregunta4 alternativa0 opcionA", 'opcionB' : "pregunta4 alternativa0 opcionB", 'opcionC' : "pregunta4 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta4 alternativa1 opcionA", 'opcionB' : "pregunta4 alternativa1 opcionB", 'opcionC' : "pregunta4 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta4 alternativa2 opcionA", 'opcionB' : "pregunta4 alternativa2 opcionB", 'opcionC' : "pregunta4 alternativa2 opcionC"}
+                                  }, 
+                    'pregunta5' : {
+                                    'alternativa0' : {'opcionA' : "pregunta5 alternativa0 opcionA", 'opcionB' : "pregunta5 alternativa0 opcionB", 'opcionC' : "pregunta5 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta5 alternativa1 opcionA", 'opcionB' : "pregunta5 alternativa1 opcionB", 'opcionC' : "pregunta5 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta5 alternativa2 opcionA", 'opcionB' : "pregunta5 alternativa2 opcionB", 'opcionC' : "pregunta5 alternativa2 opcionC"}
+                                  }, 
+                    'pregunta6' : {
+                                    'alternativa0' : {'opcionA' : "pregunta6 alternativa0 opcionA", 'opcionB' : "pregunta6 alternativa0 opcionB", 'opcionC' : "pregunta6 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta6 alternativa1 opcionA", 'opcionB' : "pregunta6 alternativa1 opcionB", 'opcionC' : "pregunta6 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta6 alternativa2 opcionA", 'opcionB' : "pregunta6 alternativa2 opcionB", 'opcionC' : "pregunta6 alternativa2 opcionC"}
+                                  }
                  }
 respuestasExamen = {
-                        'pregunta1' : {'alternativa0' : "opcionA", 'alternativa1' : "opcionA", '2' : "opcionA"}, 
-                        'pregunta2' : {'alternativa0' : "opcionA", 'alternativa1' : "opcionA", '2' : "opcionA"}, 
-                        'pregunta3' : {'alternativa0' : "opcionA", 'alternativa1' : "opcionA", '2' : "opcionA"}, 
-                        'pregunta4' : {'alternativa0' : "opcionA", 'alternativa1' : "opcionA", '2' : "opcionA"}, 
-                        'pregunta5' : {'alternativa0' : "opcionA", 'alternativa1' : "opcionA", '2' : "opcionA"}, 
-                        'pregunta6' : {'alternativa0' : "opcionA", 'alternativa1' : "opcionA", '2' : "opcionA"}
+                        'pregunta1' : {
+                                        'alternativa0' : "pregunta1 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta1 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta1 alternativa2 opcionA"
+                                      }, 
+                        'pregunta2' : {
+                                        'alternativa0' : "pregunta2 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta2 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta2 alternativa2 opcionA"
+                                      }, 
+                        'pregunta3' : {
+                                        'alternativa0' : "pregunta3 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta3 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta3 alternativa2 opcionA"         
+                                      }, 
+                        'pregunta4' : {
+                                        'alternativa0' : "pregunta4 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta4 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta4 alternativa2 opcionA"
+                                      }, 
+                        'pregunta5' : {
+                                        'alternativa0' : "pregunta5 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta5 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta5 alternativa2 opcionA"
+                                      }, 
+                        'pregunta6' : {
+                                        'alternativa0' : "pregunta6 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta6 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta6 alternativa2 opcionA"
+                                      }
+                   }
                    }
 
 def generarEvaluacion():
@@ -79,45 +126,42 @@ def generarEvaluacion():
     p6 = random.choice(list(preguntasExamen['pregunta6'].keys()))
     return {
                 'pregunta1' : {'pregunta' : preguntasExamen['pregunta1'][p1], 'opciones' : opcionesExamen['pregunta1'][p1], 'respuesta' : respuestasExamen['pregunta1'][p1]}, 
-                'pregunta2' : {'pregunta' : preguntasExamen['pregunta2'][p2], 'opciones' : opcionesExamen['pregunta2'][p2], 'respuesta' : respuestasExamen['pregunta2'][p2]}}, 
-                'pregunta3' : {'pregunta' : preguntasExamen['pregunta3'][p3], 'opciones' : opcionesExamen['pregunta3'][p3], 'respuesta' : respuestasExamen['pregunta3'][p3]}}, 
-                'pregunta4' : {'pregunta' : preguntasExamen['pregunta4'][p4], 'opciones' : opcionesExamen['pregunta4'][p4], 'respuesta' : respuestasExamen['pregunta4'][p4]}}, 
-                'pregunta5' : {'pregunta' : preguntasExamen['pregunta5'][p5], 'opciones' : opcionesExamen['pregunta5'][p5]}, 'respuesta' : respuestasExamen['pregunta5'][p5]}, 
-                'pregunta6' : {'pregunta' : preguntasExamen['pregunta6'][p6], 'opciones' : opcionesExamen['pregunta6'][p6], 'respuesta' : respuestasExamen['pregunta6'][p6]}}, 
+                'pregunta2' : {'pregunta' : preguntasExamen['pregunta2'][p2], 'opciones' : opcionesExamen['pregunta2'][p2], 'respuesta' : respuestasExamen['pregunta2'][p2]}, 
+                'pregunta3' : {'pregunta' : preguntasExamen['pregunta3'][p3], 'opciones' : opcionesExamen['pregunta3'][p3], 'respuesta' : respuestasExamen['pregunta3'][p3]}, 
+                'pregunta4' : {'pregunta' : preguntasExamen['pregunta4'][p4], 'opciones' : opcionesExamen['pregunta4'][p4], 'respuesta' : respuestasExamen['pregunta4'][p4]}, 
+                'pregunta5' : {'pregunta' : preguntasExamen['pregunta5'][p5], 'opciones' : opcionesExamen['pregunta5'][p5], 'respuesta' : respuestasExamen['pregunta5'][p5]}, 
+                'pregunta6' : {'pregunta' : preguntasExamen['pregunta6'][p6], 'opciones' : opcionesExamen['pregunta6'][p6], 'respuesta' : respuestasExamen['pregunta6'][p6]}, 
            }
 
-def corregirRespuestas(respuestas):
+def corregirRespuestas(respuestas, examen):
+    correccionResp = dict()
     correccionResp['cont'] = 0
     for i in range(len(respuestas)):
         j = i + 1
-        llavePregunta = "pregunta" + j
+        llavePregunta = "pregunta" + repr(j)
         if respuestas[i] == examen[llavePregunta]['respuesta']:
             correccionResp['cont'] += 1
-            correccionResp[llavePregunta] = "Respuesta " + j + ": CORRECTA."
+            correccionResp[llavePregunta] = "Respuesta " + repr(j) + ": CORRECTA."
         else:
-            correccionResp[llavePregunta] = "Respuesta " + j + ": INCORRECTA."
+            correccionResp[llavePregunta] = "Respuesta " + repr(j) + ": INCORRECTA."
     return correccionResp
     
 def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
-    correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6])
+    correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6], examen)
     if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN:
         correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"
         alumnos[alum]['Examenes aprobados'] += 1
-    else
+    else:
         correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
-    alumnos[alum]['Promedio de errores en examen'] += ((CANTIDAD_PREGUNTAS_EXAMEN - correccion['cont']) / (alumnos[alum]['Examenes intentados'] + ('Examenes intentados' - 1)))
+    alumnos[alum]['Promedio de errores en examen'] += ((CANTIDAD_PREGUNTAS_EXAMEN - correccion['cont']) / (alumnos[alum]['Examenes intentados'] + (alumnos[alum]['Examenes intentados'] - 1)))
     return correccion
 
 def main(dict):
     if dict['identificarse'] == 1:
-        if alumnos[dict['nombre']] is None:
+        if not dict['nombre'] in alumnos.keys():
             agregarAlumno(dict['nombre'])
         alumnos[dict['nombre']]['Cantidad de entradas al chat'] += 1
         saludo = {'message' : "¡Un gusto " +  dict['nombre'] + "!"}
-        return saludo
-     
-    if dict['consulta anterior'] ==1:
-       saludo = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['consulta anterior']] + "¿quéres hacer una evaluacion sobre ese tema de forma de respaso?"}
         return saludo
         
     if dict['temas'] == 1:
@@ -127,37 +171,9 @@ def main(dict):
     if dict['consulta'] == 1:
         alumnos[dict['nombre']]['Cantidad de consultas'] += 1
         return dict()
-    
-    if dict['El problema del cambio climático'] = 1:
-        alumnos[dict['nombre']]['Cantidad de consultas tema 1'] += 1
-        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 1'
-        return dict()
-    
-    if dict['Las causas del cambio climático'] = 1:
-        alumnos[dict['nombre']]['Cantidad de consultas tema 2'] += 1
-        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 2'
-        return dict()
         
-    if dict['El impacto social del cambio climático'] = 1:
-        alumnos[dict['nombre']]['Cantidad de consultas tema 3'] += 1
-        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 3'
-        return dict()
-        
-    if dict['El impacto en la salud humana del cambio climatico'] = 1:
-        alumnos[dict['nombre']]['Cantidad de consultas tema 4'] += 1
-        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 4'
-        return dict()
-        
-    if dict['El impacto demográfico del cambio climatico'] = 1:
-        alumnos[dict['nombre']]['Cantidad de consultas tema 5'] += 1
-        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 5'
-        return dict()
     
-    if dict['El impacto en la organización social del cambio climatico'] = 1:
-        alumnos[dict['nombre']]['Cantidad de consultas tema 6'] += 1
-        alumnos[dict['nombre']]['Consulta Anterior'] = 'tema 6'
-        return dict()
-    
+        
     if dict['bibliografia'] == 1:
         bibliografia = {'message' : materia['bibliografia']}
         return bibliografia
@@ -165,14 +181,15 @@ def main(dict):
     if dict['evaluacion'] == 0:
         alumnos[dict['nombre']]['Examenes intentados'] += 1
         examen = generarEvaluacion()
+        dict['examen'] = examen
         return examen
         
     if dict['evaluacion'] > 0 and dict['evaluacion'] < 7:
-        llave = "pregunta" + dict['evaluacion']
-        pta = examen[llave]
+        llave = "pregunta" + repr(dict['evaluacion'])
+        pta = dict['examen'][llave]
         return pta
         
     if dict['evaluacion'] == 7:
-        correccion = corregirEvaluacion(dict['nombre'], examen, dict['rta1'], dict['rta2'], dict['rta3'], dict['rta4'], dict['rta5'], dict['rta6'])
+        correccion = corregirEvaluacion(dict['nombre'], dict['examen'], dict['rta1'], dict['rta2'], dict['rta3'], dict['rta4'], dict['rta5'], dict['rta6'])
         devolucion = {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['devolucion']}
-        return devolucion 
+        return devolucion
