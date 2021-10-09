@@ -25,7 +25,7 @@ alumnos = {
 #          }
 materia = {'temas_materia' : "asd"}
 
-CANTIDAD_PREGUNTAS_EXAMEN = 6
+CANTIDAD_PREGUNTAS_EXAMEN = 6 
 
 def agregarAlumno(alumnoNuevo) :
     perfilNuevo = {
