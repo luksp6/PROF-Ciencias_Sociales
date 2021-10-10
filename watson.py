@@ -11,11 +11,11 @@ import sys
 import random
 
 alumnos = { 
-            'Lucas' : {'cantidad consultas' : 0, 'ultima consulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 0, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Pablo' : {'cantidad consultas' : 0, 'ultima consulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 0, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
-            'Luis' : {'cantidad consultas' : 0, 'ultima consulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 0, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Mateo' : {'cantidad consultas' : 0, 'ultima consulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 0, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Florencia' : {'cantidad consultas' : 0, 'ultima consulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 0, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}
+            'Lucas' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Pablo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
+            'Luis' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Mateo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Florencia' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
           }
 
 materia = {
@@ -23,12 +23,21 @@ materia = {
                 'bibliografia' : "| Fuente: Pardo Buendía, M. (2007). El impacto social del cambio climático. \n | Link: https://e-archivo.uc3m.es/bitstream/handle/10016/10448/impacto_pardo_2007.pdf?sequence=1&isAllowed=y"
           }
 
+respuestasConsultas = { 
+                        'consulta problema' : {1 : "Respuesta problema 1", 2 : "Respuesta problema 2", 3 : "Respuesta problema 3"},
+                        'consulta causas' : {1 : "Respuesta causas 1", 2 : "Respuesta causas 2", 3 : "Respuesta causas 3"},
+                        'consulta impacto social' : {1 : "Respuesta impacto social 1", 2 : "Respuesta impacto social 2", 3 : "Respuesta impacto social 3"},
+                        'consulta impacto salud' : {1 : "Respuesta impacto salud 1", 2 : "Respuesta impacto salud 2", 3 : "Respuesta impacto salud 3"},
+                        'consulta impacto demografico' : {1 : "Respuesta impacto demografico 1", 2 : "Respuesta impacto demografico 2", 3 : "Respuesta impacto demografico 3"},
+                        'consulta impacto economico' : {1 : "Respuesta impacto economico 1", 2 : "Respuesta impacto economico 2", 3 : "Respuesta impacto economico 3"},
+                        'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"},
+
 CANTIDAD_PREGUNTAS_EXAMEN = 6 
 
 def agregarAlumno(alumnoNuevo) :
     perfilNuevo = {
-                    'cantidad consultas' : 0, 
-                    'ultima consulta' : None,
+                    'cantidadConsultas' : 0, 
+                    'ultimaConsulta' : None,
                     'cantidad consulta problema' : 0,
                     'cantidad consulta causas' : 0,
                     'cantidad consulta impacto social' : 0,
@@ -36,7 +45,7 @@ def agregarAlumno(alumnoNuevo) :
                     'cantidad consulta impacto demografico' : 0, 
                     'cantidad consulta impacto economico' : 0,
                     'cantidad consulta solucion' : 0,
-                    'promedio entendimiento' : 0, 
+                    'promedio entendimiento' : 1, 
                     'examenes intentados' : 0, 
                     'examenes aprobados' : 0, 
                     'promedio errores examen' : 0, 
@@ -134,7 +143,7 @@ def generarEvaluacion():
            }
 
 def buenConcepto(alum):
-    if alumnos[alum]['cantidad consultas'] >= 10 and alumnos[alum]['cantidad entradas chat'] >= 10:
+    if alumnos[alum]['cantidadConsultas'] >= 10 and alumnos[alum]['cantidad entradas chat'] >= 10:
      return True
     else: 
      return False
@@ -166,14 +175,7 @@ def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
             else:
                 if correccion['cont'] >= CANTIDAD_PREGUNTAS_EXAMEN-1: 
                    alumnos[alum]['examenes aprobados'] += 1
-                   correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"              
-    # este es el que se probo y anduvo
-    #    alumnos[alum]['Examenes aprobados'] += 1      
-   # if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN:
-    #    correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"
-    #    alumnos[alum]['examenes aprobados'] += 1
-    #else:
-    #    correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
+                   correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!"
     alumnos[alum]['promedio errores examen'] += ((CANTIDAD_PREGUNTAS_EXAMEN - correccion['cont']) / (alumnos[alum]['examenes intentados'] + (alumnos[alum]['examenes intentados'] - 1)))
     return correccion
 
@@ -189,19 +191,24 @@ def main(dict):
         temas = {'message' : materia['temas_materia']}
         return temas
     
-    if dict['ultima consulta'] == 1:
-        salida = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['ultima consulta']] + "¿querés hacer una evaluacion sobre ese tema en forma de respaso?"}
+    if dict['ultimaConsulta'] == 1:
+        salida = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['ultimaConsulta']] + "¿querés hacer una evaluacion sobre ese tema en forma de respaso?"}
         return salida  
         
     if dict['consulta'] == 1:
         alumnos[dict['nombre']]['cantidad consultas'] += 1
-        return dict()
         
-    if dict['tipo consulta'] != -1:
-        llaveConsulta = "cantidad " + dict['tipo consulta']
+    if dict['tipoConsulta'] != -1:
+        llaveConsulta = "cantidad " + dict['tipoConsulta']
         alumnos[dict['nombre']][llaveConsulta] += 1
-        alumnos[dict['nombre']]['ultima consulta'] = dict['tipo consulta']
-        
+        alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
+        respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][alumnos[dict['nombre']]['promedio entendimiento']]}
+        return respuesta
+    
+    if dict['verificarEntendimiento'] != -1:
+        alumnos[dict['nombre']]['promedio entendimiento'] = (((alumnos[dict['nombre']]['cantidad consultas'] - 1) * alumnos[dict['nombre']]['promedio entendimiento']) + dict['verificarEntendimiento']) / alumnos[dict['nombre']]['cantidad consultas']
+        return dict()
+    
     if dict['bibliografia'] == 1:
         bibliografia = {'message' : materia['bibliografia']}
         return bibliografia
