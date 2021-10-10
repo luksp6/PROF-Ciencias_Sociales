@@ -135,9 +135,9 @@ def generarEvaluacion():
 
 def buenConcepto(alum):
     if alumnos[alum]['cantidad consultas'] >= 10 and alumnos[alum]['cantidad entradas chat'] >= 10:
-     return true
+     return True
     else: 
-     return false
+     return False
 
 def corregirRespuestas(respuestas, examen):
     correccionResp = dict()
@@ -157,11 +157,11 @@ def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
     if correccion['cont'] < CANTIDAD_PREGUNTAS_EXAMEN-2:
        correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
     else:
-       if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN-2 and buenConcepto(alum) == true:
+       if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN-2 and buenConcepto(alum):
              alumnos[alum]['examenes aprobados'] += 1
              correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la evaluacion!" + " Pero ojo pero un punto fue de concepto, por tu participacion, ¡a estudiar un poco mas!"
        else:
-            if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN-2 and buenConcepto(alum) == false:
+            if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN-2 and buenConcepto(alum) == False:
               correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
             else:
                 if correccion['cont'] >= CANTIDAD_PREGUNTAS_EXAMEN-1: 
