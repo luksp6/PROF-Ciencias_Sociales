@@ -209,6 +209,22 @@ def main(dict):
         alumnos[dict['nombre']]['promedio entendimiento'] = (((alumnos[dict['nombre']]['cantidad consultas'] - 1) * alumnos[dict['nombre']]['promedio entendimiento']) + dict['verificarEntendimiento']) / alumnos[dict['nombre']]['cantidad consultas']
         return dict()
     
+    #opcion 1 del contador
+    #contador = 1
+    #if dict['niega entendimiento'] == 1:
+    #   contador = contador + 1
+
+    #opcion 2 del contador
+    #if dict['niega entendimiento'] == 1:
+    #   contador.append('no entendio')
+    
+    #cantidad de veces que entro a la misma consulta seria usar 
+    #len(lista_generica)
+
+    #si usamos lista, directamente vaciamos to al toque si hay un afirmativo    
+    #if dict['afirma entendimiento'] == 1:
+    #    contador.clear()
+
     if dict['bibliografia'] == 1:
         bibliografia = {'message' : materia['bibliografia']}
         return bibliografia
