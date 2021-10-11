@@ -126,6 +126,9 @@ respuestasExamen = {
                                       }
                    }
 
+#contador que usaremos pa cuando niegue el entendimiento de un tema cuando lo consulto previamente
+contador = []
+
 def generarEvaluacion():
     p1 = random.choice(list(preguntasExamen['pregunta1'].keys()))
     p2 = random.choice(list(preguntasExamen['pregunta2'].keys()))
