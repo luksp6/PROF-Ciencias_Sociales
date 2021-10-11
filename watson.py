@@ -11,12 +11,13 @@ import sys
 import random
 
 alumnos = { 
-            'Lucas' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
             'Pablo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
             'Luis' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
             'Mateo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
             'Florencia' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
           }
+
 
 materia = {
                 'temas_materia' : "Los temas de nuestra clase son: \n | El problema del cambio climático. \n | Las causas del cambio climático. \n | El impacto social del cambio climático. \n | El impacto en la salud humana del cambio climático. \n | El impacto demográfico del cambio climático. \n | El impacto económico del cambio climático. \n | Las soluciones al problema del cambio climático. ", 
@@ -30,7 +31,8 @@ respuestasConsultas = {
                         'consulta impacto salud' : {1 : "Respuesta impacto salud 1", 2 : "Respuesta impacto salud 2", 3 : "Respuesta impacto salud 3"},
                         'consulta impacto demografico' : {1 : "Respuesta impacto demografico 1", 2 : "Respuesta impacto demografico 2", 3 : "Respuesta impacto demografico 3"},
                         'consulta impacto economico' : {1 : "Respuesta impacto economico 1", 2 : "Respuesta impacto economico 2", 3 : "Respuesta impacto economico 3"},
-                        'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"},
+                        'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"}
+                      }
 
 CANTIDAD_PREGUNTAS_EXAMEN = 6 
 
@@ -61,6 +63,7 @@ preguntasExamen = {
                     'pregunta5' : {'alternativa0' : "pregunta5 alternativa0", 'alternativa1' : "pregunta5 alternativa1", 'alternativa2' : "pregunta5 alternativa2"}, 
                     'pregunta6' : {'alternativa0' : "pregunta6 alternativa0", 'alternativa1' : "pregunta6 alternativa1", 'alternativa2' : "pregunta6 alternativa1"}
                   }
+                  
 opcionesExamen = {
                     'pregunta1' : {
                                     'alternativa0' : {'opcionA' : "pregunta1 alternativa0 opcionA", 'opcionB' : "pregunta1 alternativa0 opcionB", 'opcionC' : "pregunta1 alternativa0 opcionC"}, 
@@ -126,9 +129,6 @@ respuestasExamen = {
                                       }
                    }
 
-#contador que usaremos pa cuando niegue el entendimiento de un tema cuando lo consulto previamente
-contador = []
-
 def generarEvaluacion():
     p1 = random.choice(list(preguntasExamen['pregunta1'].keys()))
     p2 = random.choice(list(preguntasExamen['pregunta2'].keys()))
@@ -182,6 +182,9 @@ def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
     alumnos[alum]['promedio errores examen'] += ((CANTIDAD_PREGUNTAS_EXAMEN - correccion['cont']) / (alumnos[alum]['examenes intentados'] + (alumnos[alum]['examenes intentados'] - 1)))
     return correccion
 
+def verificarEntendimiento(alum, nivelEntendimiento):
+    alumnos[alum]['promedio entendimiento'] = (((alumnos[alum]['cantidadConsultas'] - 1) * alumnos[alum]['promedio entendimiento']) + nivelEntendimiento) / alumnos[alum]['cantidadConsultas']
+
 def main(dict):
     if dict['identificarse'] == 1:
         if not dict['nombre'] in alumnos.keys():
@@ -196,37 +199,29 @@ def main(dict):
     
     if dict['ultimaConsulta'] == 1:
         salida = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['ultimaConsulta']] + "¿querés hacer una evaluacion sobre ese tema en forma de respaso?"}
-        return salida  
-        
-    if dict['consulta'] == 1:
-        alumnos[dict['nombre']]['cantidad consultas'] += 1
+        return salida
         
     if dict['tipoConsulta'] != -1:
+        alumnos[dict['nombre']]['cantidadConsultas'] += 1
         llaveConsulta = "cantidad " + dict['tipoConsulta']
         alumnos[dict['nombre']][llaveConsulta] += 1
         alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
-        respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][alumnos[dict['nombre']]['promedio entendimiento']]}
+        if dict['contadorNoEntiende']['valor'] > 1 and dict['contadorNoEntiende']['valor'] <= 3:
+            respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][dict['contadorNoEntiende']['valor']], "entiende" : dict['contadorNoEntiende']['valor']}
+        elif dict['contadorNoEntiende']['valor'] > 3:
+            respuesta = {'message' : "Vas a tener que seguir estudiando " + dict['nombre'] + ", te recomiendo revisar la bibliografia del curso: \n" + materia['bibliografia']}
+        else:
+            respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][alumnos[dict['nombre']]['promedio entendimiento']], 'entiende' : 1}
         return respuesta
     
-    if dict['verificarEntendimiento'] != -1:
-        alumnos[dict['nombre']]['promedio entendimiento'] = (((alumnos[dict['nombre']]['cantidad consultas'] - 1) * alumnos[dict['nombre']]['promedio entendimiento']) + dict['verificarEntendimiento']) / alumnos[dict['nombre']]['cantidad consultas']
-        return dict()
+    if dict['verificarEntendimiento'] == 1:
+        verificarEntendimiento(dict['nombre'], dict['entiende']['entiende'])
+        salida = {'' : ""}
+        return salida
     
-    #opcion 1 del contador
-    #contador = 1
-    #if dict['niega entendimiento'] == 1:
-    #   contador = contador + 1
-
-    #opcion 2 del contador
-    #if dict['niega entendimiento'] == 1:
-    #   contador.append('no entendio')
-    
-    #cantidad de veces que entro a la misma consulta seria usar 
-    #len(lista_generica)
-
-    #si usamos lista, directamente vaciamos to al toque si hay un afirmativo    
-    #if dict['afirma entendimiento'] == 1:
-    #    contador.clear()
+    if dict['niegaEntendimiento'] == 1:
+        dict['contadorNoEntiende']['valor'] += 1
+        return dict['contadorNoEntiende']
 
     if dict['bibliografia'] == 1:
         bibliografia = {'message' : materia['bibliografia']}
