@@ -11,7 +11,7 @@ import sys
 import random
 
 alumnos = { 
-            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
             'Pablo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
             'Luis' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
             'Mateo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
@@ -34,7 +34,8 @@ respuestasConsultas = {
                         'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"}
                       }
 
-CANTIDAD_PREGUNTAS_EXAMEN = 6 
+CANTIDAD_PREGUNTAS_EXAMEN = 7
+CANTIDAD_PREGUNTAS_EXAMEN_TEMA = 3
 
 def agregarAlumno(alumnoNuevo) :
     perfilNuevo = {
@@ -61,7 +62,8 @@ preguntasExamen = {
                     'pregunta3' : {'alternativa0' : "pregunta3 alternativa0", 'alternativa1' : "pregunta3 alternativa1", 'alternativa2' : "pregunta3 alternativa2"}, 
                     'pregunta4' : {'alternativa0' : "pregunta4 alternativa0", 'alternativa1' : "pregunta4 alternativa1", 'alternativa2' : "pregunta4 alternativa2"}, 
                     'pregunta5' : {'alternativa0' : "pregunta5 alternativa0", 'alternativa1' : "pregunta5 alternativa1", 'alternativa2' : "pregunta5 alternativa2"}, 
-                    'pregunta6' : {'alternativa0' : "pregunta6 alternativa0", 'alternativa1' : "pregunta6 alternativa1", 'alternativa2' : "pregunta6 alternativa1"}
+                    'pregunta6' : {'alternativa0' : "pregunta6 alternativa0", 'alternativa1' : "pregunta6 alternativa1", 'alternativa2' : "pregunta6 alternativa1"},
+                    'pregunta7' : {'alternativa0' : "pregunta7 alternativa0", 'alternativa1' : "pregunta7 alternativa1", 'alternativa2' : "pregunta7 alternativa1"}
                   }
                   
 opcionesExamen = {
@@ -94,6 +96,11 @@ opcionesExamen = {
                                     'alternativa0' : {'opcionA' : "pregunta6 alternativa0 opcionA", 'opcionB' : "pregunta6 alternativa0 opcionB", 'opcionC' : "pregunta6 alternativa0 opcionC"}, 
                                     'alternativa1' : {'opcionA' : "pregunta6 alternativa1 opcionA", 'opcionB' : "pregunta6 alternativa1 opcionB", 'opcionC' : "pregunta6 alternativa1 opcionC"}, 
                                     'alternativa2' : {'opcionA' : "pregunta6 alternativa2 opcionA", 'opcionB' : "pregunta6 alternativa2 opcionB", 'opcionC' : "pregunta6 alternativa2 opcionC"}
+                                  },
+                    'pregunta7' : {
+                                    'alternativa0' : {'opcionA' : "pregunta7 alternativa0 opcionA", 'opcionB' : "pregunta7 alternativa0 opcionB", 'opcionC' : "pregunta7 alternativa0 opcionC"}, 
+                                    'alternativa1' : {'opcionA' : "pregunta7 alternativa1 opcionA", 'opcionB' : "pregunta7 alternativa1 opcionB", 'opcionC' : "pregunta7 alternativa1 opcionC"}, 
+                                    'alternativa2' : {'opcionA' : "pregunta7 alternativa2 opcionA", 'opcionB' : "pregunta7 alternativa2 opcionB", 'opcionC' : "pregunta7 alternativa2 opcionC"}
                                   }
                  }
 respuestasExamen = {
@@ -126,6 +133,11 @@ respuestasExamen = {
                                         'alternativa0' : "pregunta6 alternativa0 opcionA", 
                                         'alternativa1' : "pregunta6 alternativa1 opcionA", 
                                         'alternativa2' : "pregunta6 alternativa2 opcionA"
+                                      },
+                        'pregunta7' : {
+                                        'alternativa0' : "pregunta7 alternativa0 opcionA", 
+                                        'alternativa1' : "pregunta7 alternativa1 opcionA", 
+                                        'alternativa2' : "pregunta7 alternativa2 opcionA"
                                       }
                    }
 
@@ -136,13 +148,15 @@ def generarEvaluacion():
     p4 = random.choice(list(preguntasExamen['pregunta4'].keys()))
     p5 = random.choice(list(preguntasExamen['pregunta5'].keys()))
     p6 = random.choice(list(preguntasExamen['pregunta6'].keys()))
+    p7 = random.choice(list(preguntasExamen['pregunta7'].keys()))
     return {
                 'pregunta1' : {'pregunta' : preguntasExamen['pregunta1'][p1], 'opciones' : opcionesExamen['pregunta1'][p1], 'respuesta' : respuestasExamen['pregunta1'][p1]}, 
                 'pregunta2' : {'pregunta' : preguntasExamen['pregunta2'][p2], 'opciones' : opcionesExamen['pregunta2'][p2], 'respuesta' : respuestasExamen['pregunta2'][p2]}, 
                 'pregunta3' : {'pregunta' : preguntasExamen['pregunta3'][p3], 'opciones' : opcionesExamen['pregunta3'][p3], 'respuesta' : respuestasExamen['pregunta3'][p3]}, 
                 'pregunta4' : {'pregunta' : preguntasExamen['pregunta4'][p4], 'opciones' : opcionesExamen['pregunta4'][p4], 'respuesta' : respuestasExamen['pregunta4'][p4]}, 
                 'pregunta5' : {'pregunta' : preguntasExamen['pregunta5'][p5], 'opciones' : opcionesExamen['pregunta5'][p5], 'respuesta' : respuestasExamen['pregunta5'][p5]}, 
-                'pregunta6' : {'pregunta' : preguntasExamen['pregunta6'][p6], 'opciones' : opcionesExamen['pregunta6'][p6], 'respuesta' : respuestasExamen['pregunta6'][p6]}, 
+                'pregunta6' : {'pregunta' : preguntasExamen['pregunta6'][p6], 'opciones' : opcionesExamen['pregunta6'][p6], 'respuesta' : respuestasExamen['pregunta6'][p6]},
+                'pregunta7' : {'pregunta' : preguntasExamen['pregunta7'][p7], 'opciones' : opcionesExamen['pregunta7'][p7], 'respuesta' : respuestasExamen['pregunta7'][p7]}
            }
 
 def buenConcepto(alum):
@@ -164,8 +178,8 @@ def corregirRespuestas(respuestas, examen):
             correccionResp[llavePregunta] = "Respuesta " + repr(j) + ": INCORRECTA."
     return correccionResp
     
-def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
-    correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6], examen)
+def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6, rta7):
+    correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6, rta7], examen)
     if correccion['cont'] < CANTIDAD_PREGUNTAS_EXAMEN-2:
        correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
     else:
@@ -182,65 +196,112 @@ def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
     alumnos[alum]['promedio errores examen'] += ((CANTIDAD_PREGUNTAS_EXAMEN - correccion['cont']) / (alumnos[alum]['examenes intentados'] + (alumnos[alum]['examenes intentados'] - 1)))
     return correccion
 
+def corregirEvaluacionTema(alum, examen, rta1, rta2, rta3):
+    correccion = corregirRespuestas([rta1, rta2, rta3], examen)
+    if correccion['cont'] == CANTIDAD_PREGUNTAS_EXAMEN_TEMA:
+        correccion['devolucion'] = "¡Felicitaciones " + alum + "! ¡Aprobaste la mini evaluacion!"
+    else:
+       correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
+    return correccion
+
+def generarEvaluacionTema(tema):
+    if tema == 'consulta problema':
+        llave = 'pregunta1'
+    if tema == 'consulta causas':
+        llave = 'pregunta2'
+    if tema == 'consulta impacto social':
+        llave = 'pregunta3'
+    if tema == 'consulta impacto salud':
+        llave = 'pregunta4'
+    if tema == 'consulta impacto demografico':
+        llave = 'pregunta5'
+    if tema == 'consulta impacto economico':
+        llave = 'pregunta6'
+    if tema == 'consulta solucion':
+        llave = 'pregunta7'
+    return {
+                'pregunta1' : {'pregunta' : preguntasExamen[llave]['alternativa0'], 'opciones' : opcionesExamen[llave]['alternativa0'], 'respuesta' : respuestasExamen[llave]['alternativa0']}, 
+                'pregunta2' : {'pregunta' : preguntasExamen[llave]['alternativa1'], 'opciones' : opcionesExamen[llave]['alternativa1'], 'respuesta' : respuestasExamen[llave]['alternativa1']}, 
+                'pregunta3' : {'pregunta' : preguntasExamen[llave]['alternativa2'], 'opciones' : opcionesExamen[llave]['alternativa2'], 'respuesta' : respuestasExamen[llave]['alternativa2']}
+           }
+
+def identificarse(alum):
+    if not alum in alumnos.keys():
+            agregarAlumno(alum)
+    alumnos[alum]['cantidad entradas chat'] += 1
+    return {'message' : "¡Un gusto " +  alum + "!"}
+
+def ultimaConsulta(alum):
+    if alumnos[alum]['ultimaConsulta'] != None:
+        return {'message' : alum + ", la ultima vez consultaste sobre: " +  alumnos[alum]['ultimaConsulta'] + "\n ¿querés hacer una evaluacion sobre ese tema en forma de repaso?"}
+    else:
+        return {'message' : alum + ", aun no has realizado ninguna consulta en esta clase"}
+
+def temas():
+    return {'message' : materia['temas_materia']}
+
+def consulta(alum, llaveConsulta, tipoConsulta, contador):
+    alumnos[alum]['cantidadConsultas'] += 1
+    alumnos[alum][llaveConsulta] += 1
+    if alumnos[alum]['ultimaConsulta'] != tipoConsulta:
+        alumnos[alum]['ultimaConsulta'] = tipoConsulta
+        contador = 1 #se iniciaria en uno?
+    if contador > 1 and contador <= 3:
+        respuesta = {'message' : respuestasConsultas[tipoConsulta][contador], "entiende" : contador}
+    elif contador > 3:
+        respuesta = {'message' : "Vas a tener que seguir estudiando " + alum + ", te recomiendo revisar la bibliografia del curso: \n" + materia['bibliografia']}
+    else:
+        respuesta = {'message' : respuestasConsultas[tipoConsulta][alumnos[alum]['promedio entendimiento']], 'entiende' : 1}
+    return respuesta
+            
 def verificarEntendimiento(alum, nivelEntendimiento):
     alumnos[alum]['promedio entendimiento'] = round((((alumnos[alum]['cantidadConsultas'] - 1) * alumnos[alum]['promedio entendimiento']) + nivelEntendimiento) / alumnos[alum]['cantidadConsultas'])
+    return {'' : ""}
+
+def actualizarContador(cont):
+    cont['valor'] += 1
+    return cont
 
 def main(dict):
     if dict['identificarse'] == 1:
-        if not dict['nombre'] in alumnos.keys():
-            agregarAlumno(dict['nombre'])
-        alumnos[dict['nombre']]['cantidad entradas chat'] += 1
-        saludo = {'message' : "¡Un gusto " +  dict['nombre'] + "!"}
-        return saludo
+        return identificarse(dict['nombre'])
         
     if dict['temas'] == 1:
-        temas = {'message' : materia['temas_materia']}
-        return temas
+        return temas()
     
     if dict['ultimaConsulta'] == 1:
-        salida = {'message' : dict['nombre'] + "la ultima vez consultaste sobre " +  alumnos[dict['nombre']][dict['ultimaConsulta']] + "¿querés hacer una evaluacion sobre ese tema en forma de respaso?"}
-        return salida
+        return ultimaConsulta(dict['nombre'])
+        
+    if dict['evaluacionTema'] != -1:
+        if dict['evaluacionTema'] == 0:
+            return generarEvaluacionTema(alumnos[dict['nombre']]['ultimaConsulta'])
+        if dict['evaluacionTema'] > 0 and dict['evaluacionTema'] <= CANTIDAD_PREGUNTAS_EXAMEN_TEMA:
+            llavePregunta = "pregunta" + repr(dict['evaluacionTema'])
+            return dict['examenTema'][llavePregunta]
+        if dict['evaluacionTema'] == CANTIDAD_PREGUNTAS_EXAMEN_TEMA + 1:
+            correccion = corregirEvaluacionTema(dict['nombre'], dict['examenTema'], dict['rta1tema'], dict['rta2tema'], dict['rta3tema'])
+            return {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['devolucion']}
         
     if dict['tipoConsulta'] != -1:
-        alumnos[dict['nombre']]['cantidadConsultas'] += 1
         llaveConsulta = "cantidad " + dict['tipoConsulta']
-        alumnos[dict['nombre']][llaveConsulta] += 1
-        if  alumnos[dict['nombre']]['ultimaConsulta'] != dict['tipoConsulta']:
-           alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
-           dict['contadorNoEntiende']['valor'] = 1 #se iniciaria en uno?
-        if dict['contadorNoEntiende']['valor'] > 1 and dict['contadorNoEntiende']['valor'] <= 3:
-            respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][dict['contadorNoEntiende']['valor']], "entiende" : dict['contadorNoEntiende']['valor']}
-        elif dict['contadorNoEntiende']['valor'] > 3:
-            respuesta = {'message' : "Vas a tener que seguir estudiando " + dict['nombre'] + ", te recomiendo revisar la bibliografia del curso: \n" + materia['bibliografia']}
-        else:
-            respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][alumnos[dict['nombre']]['promedio entendimiento']], 'entiende' : 1}
-        return respuesta
+        return consulta(dict['nombre'], llaveConsulta, dict['tipoConsulta'], dict['contadorNoEntiende']['valor'])
     
     if dict['verificarEntendimiento'] == 1:
-        verificarEntendimiento(dict['nombre'], dict['entiende']['entiende'])
-        salida = {'' : ""}
-        return salida
+        return verificarEntendimiento(dict['nombre'], dict['entiende']['entiende'])
     
     if dict['niegaEntendimiento'] == 1:
-        dict['contadorNoEntiende']['valor'] += 1
-        return dict['contadorNoEntiende']
+        return actualizarContador(dict['contadorNoEntiende'])
 
     if dict['bibliografia'] == 1:
-        bibliografia = {'message' : materia['bibliografia']}
-        return bibliografia
-        
-    if dict['evaluacion'] == 0:
-        alumnos[dict['nombre']]['examenes intentados'] += 1
-        examen = generarEvaluacion()
-        dict['examen'] = examen
-        return examen
-        
-    if dict['evaluacion'] > 0 and dict['evaluacion'] < 7:
-        llave = "pregunta" + repr(dict['evaluacion'])
-        pta = dict['examen'][llave]
-        return pta
-        
-    if dict['evaluacion'] == 7:
-        correccion = corregirEvaluacion(dict['nombre'], dict['examen'], dict['rta1'], dict['rta2'], dict['rta3'], dict['rta4'], dict['rta5'], dict['rta6'])
-        devolucion = {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['devolucion']}
-        return devolucion
+        return {'message' : materia['bibliografia']}
+    
+    if dict['evaluacion'] != -1:
+        if dict['evaluacion'] == 0:
+            alumnos[dict['nombre']]['examenes intentados'] += 1
+            return generarEvaluacion()
+        if dict['evaluacion'] > 0 and dict['evaluacion'] <= CANTIDAD_PREGUNTAS_EXAMEN:
+            llavePregunta = "pregunta" + repr(dict['evaluacion'])
+            return dict['examen'][llavePregunta]
+        if dict['evaluacion'] == CANTIDAD_PREGUNTAS_EXAMEN + 1:
+            correccion = corregirEvaluacion(dict['nombre'], dict['examen'], dict['rta1'], dict['rta2'], dict['rta3'], dict['rta4'], dict['rta5'], dict['rta6'], dict['rta7'])
+            return {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['devolucion']}
