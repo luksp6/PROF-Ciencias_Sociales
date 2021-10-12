@@ -206,6 +206,9 @@ def main(dict):
         llaveConsulta = "cantidad " + dict['tipoConsulta']
         alumnos[dict['nombre']][llaveConsulta] += 1
         alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
+        if  alumnos[dict['nombre']]['ultimaConsulta'] != dict['tipoConsulta']
+           alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
+           dict['contadorNoEntiende']['valor'] = 1 #se iniciaria en uno?
         if dict['contadorNoEntiende']['valor'] > 1 and dict['contadorNoEntiende']['valor'] <= 3:
             respuesta = {'message' : respuestasConsultas[dict['tipoConsulta']][dict['contadorNoEntiende']['valor']], "entiende" : dict['contadorNoEntiende']['valor']}
         elif dict['contadorNoEntiende']['valor'] > 3:
