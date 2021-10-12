@@ -183,7 +183,7 @@ def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6):
     return correccion
 
 def verificarEntendimiento(alum, nivelEntendimiento):
-    alumnos[alum]['promedio entendimiento'] = (((alumnos[alum]['cantidadConsultas'] - 1) * alumnos[alum]['promedio entendimiento']) + nivelEntendimiento) / alumnos[alum]['cantidadConsultas']
+    alumnos[alum]['promedio entendimiento'] = round((((alumnos[alum]['cantidadConsultas'] - 1) * alumnos[alum]['promedio entendimiento']) + nivelEntendimiento) / alumnos[alum]['cantidadConsultas'])
 
 def main(dict):
     if dict['identificarse'] == 1:
@@ -205,8 +205,7 @@ def main(dict):
         alumnos[dict['nombre']]['cantidadConsultas'] += 1
         llaveConsulta = "cantidad " + dict['tipoConsulta']
         alumnos[dict['nombre']][llaveConsulta] += 1
-        alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
-        if  alumnos[dict['nombre']]['ultimaConsulta'] != dict['tipoConsulta']
+        if  alumnos[dict['nombre']]['ultimaConsulta'] != dict['tipoConsulta']:
            alumnos[dict['nombre']]['ultimaConsulta'] = dict['tipoConsulta']
            dict['contadorNoEntiende']['valor'] = 1 #se iniciaria en uno?
         if dict['contadorNoEntiende']['valor'] > 1 and dict['contadorNoEntiende']['valor'] <= 3:
