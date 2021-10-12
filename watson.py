@@ -57,87 +57,115 @@ def agregarAlumno(alumnoNuevo) :
     alumnos[alumnoNuevo] = perfilNuevo
 
 preguntasExamen = {
-                    'pregunta1' : {'alternativa0' : "pregunta1 alternativa0", 'alternativa1' : "pregunta1 alternativa1", 'alternativa2' : "pregunta1 alternativa2"}, 
-                    'pregunta2' : {'alternativa0' : "pregunta2 alternativa0", 'alternativa1' : "pregunta2 alternativa1", 'alternativa2' : "pregunta2 alternativa2"}, 
-                    'pregunta3' : {'alternativa0' : "pregunta3 alternativa0", 'alternativa1' : "pregunta3 alternativa1", 'alternativa2' : "pregunta3 alternativa2"}, 
-                    'pregunta4' : {'alternativa0' : "pregunta4 alternativa0", 'alternativa1' : "pregunta4 alternativa1", 'alternativa2' : "pregunta4 alternativa2"}, 
-                    'pregunta5' : {'alternativa0' : "pregunta5 alternativa0", 'alternativa1' : "pregunta5 alternativa1", 'alternativa2' : "pregunta5 alternativa2"}, 
-                    'pregunta6' : {'alternativa0' : "pregunta6 alternativa0", 'alternativa1' : "pregunta6 alternativa1", 'alternativa2' : "pregunta6 alternativa1"},
-                    'pregunta7' : {'alternativa0' : "pregunta7 alternativa0", 'alternativa1' : "pregunta7 alternativa1", 'alternativa2' : "pregunta7 alternativa1"}
+                    'pregunta1' : {
+                                    'alternativa0' : "Hay dos características del cambio climático actual que hace que los impactos biofísicos y sociales globales asociados sean únicos en la historia del planeta", 
+                                    'alternativa1' : "¿Cuáles son los gases de efecto invernadero?", 
+                                    'alternativa2' : "¿Cuánto aumento la temperatura global de la tierra debido al efecto invernadero en el último siglo?"
+                                  }, 
+                    'pregunta2' : {
+                                    'alternativa0' : "¿Cuáles son las causantes del efecto invernadero?", 
+                                    'alternativa1' : "¿Cuánto creció el consumo energético mundial en las 2 últimas décadas?", 
+                                    'alternativa2' : "¿Cuánto se prevé que aumentara el consumo energético de aquí al 2030?"
+                                  }, 
+                    'pregunta3' : {
+                                    'alternativa0' : "El cambio climático es:", 
+                                    'alternativa1' : "El cambio climático afecta a…", 
+                                    'alternativa2' : "¿El cambio climático también es consecuencia de la velocidad del cambio social en las sociedades contemporáneas que afecta?"
+                                  }, 
+                    'pregunta4' : {
+                                    'alternativa0' : "El cambio climático, ¿perjudica y/o beneficia la salud humana?", 
+                                    'alternativa1' : "Además de olas de calor, las cuales provocaron la muerte de muchas personas. ¿Que otras consecuencias hubo por el cambio climático?", 
+                                    'alternativa2' : "Potenciales beneficios para la salud causados por el cambio climatico: "
+                                  }, 
+                    'pregunta5' : {
+                                    'alternativa0' : "Las migraciones internacionales:", 
+                                    'alternativa1' : "Las migraciones dentro de un pais", 
+                                    'alternativa2' : "El/los impactos inmediatos de las migraciones se manifiestan en:"
+                                  }, 
+                    'pregunta6' : {
+                                    'alternativa0' : "La rápida urbanización de zonas bajas costeras, tanto en el mundo económicamente desarrollado como en el mundo empobrecido, está produciendo:", 
+                                    'alternativa1' : "¿Que asentamientos humanos son mas vulnerables a los impactos del cambio climatico?",
+                                    'alternativa2' : "Existen testimonios que corroboran el colapso de civilizaciones por razones medioambientales a los que no quisieron o no supieron adaptarse, ¿cuál sería un ejemplo?"
+                                  },
+                    'pregunta7' : {
+                                    'alternativa0' : "¿Que cambio en el modelo energetico hegemonico seria propicio como solucion al cambio climatico?",
+                                    'alternativa1' : "¿Cuál es un acuerdo mundial para la lucha del cambio climático?", 
+                                    'alternativa2' : "¿Cuántos países firmaron el acuerdo mundial para la lucha del cambio climático?"
+                                  }
                   }
                   
 opcionesExamen = {
                     'pregunta1' : {
-                                    'alternativa0' : {'opcionA' : "pregunta1 alternativa0 opcionA", 'opcionB' : "pregunta1 alternativa0 opcionB", 'opcionC' : "pregunta1 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta1 alternativa1 opcionA", 'opcionB' : "pregunta1 alternativa1 opcionB", 'opcionC' : "pregunta1 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta1 alternativa2 opcionA", 'opcionB' : "pregunta1 alternativa2 opcionB", 'opcionC' : "pregunta1 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "Pasividad y debilidad", 'opcionB' : "Rapidez e intensidad", 'opcionC' : "Lento e intenso"}, 
+                                    'alternativa1' : {'opcionA' : "Dióxido de carbono, Metano y Óxidos de nitrógeno", 'opcionB' : "Amoniaco, Benceno y neón", 'opcionC' : "Sulfuro de hidrógeno, Monóxido de carbono"}, 
+                                    'alternativa2' : {'opcionA' : "0, 5º C", 'opcionB' : "0, 7º C", 'opcionC' : "0, 9º C"}
                                   }, 
                     'pregunta2' : {
-                                    'alternativa0' : {'opcionA' : "pregunta2 alternativa0 opcionA", 'opcionB' : "pregunta2 alternativa0 opcionB", 'opcionC' : "pregunta2 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta2 alternativa1 opcionA", 'opcionB' : "pregunta2 alternativa1 opcionB", 'opcionC' : "pregunta2 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta2 alternativa2 opcionA", 'opcionB' : "pregunta2 alternativa2 opcionB", 'opcionC' : "pregunta2 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "El petróleo, el gas natural y el carbón", 'opcionB' : "El petroleo y el gas natural", 'opcionC' : "El carbon y el petroleo"}, 
+                                    'alternativa1' : {'opcionA' : "30%", 'opcionB' : "40%", 'opcionC' : "25%"}, 
+                                    'alternativa2' : {'opcionA' : "48%", 'opcionB' : "53%", 'opcionC' : "67%"}
                                   }, 
                     'pregunta3' : {
-                                    'alternativa0' : {'opcionA' : "pregunta3 alternativa0 opcionA", 'opcionB' : "pregunta3 alternativa0 opcionB", 'opcionC' : "pregunta3 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta3 alternativa1 opcionA", 'opcionB' : "pregunta3 alternativa1 opcionB", 'opcionC' : "pregunta3 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta3 alternativa2 opcionA", 'opcionB' : "pregunta3 alternativa2 opcionB", 'opcionC' : "pregunta3 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "Un hecho social", 'opcionB' : "Un hecho ambiental", 'opcionC' : "Un hecho economico"}, 
+                                    'alternativa1' : {'opcionA' : "Todos sus ecosistemas y a todas sus sociedades, incluyendo las generaciones futuras", 'opcionB' : "Solo las sociedades", 'opcionC' : "Generaciones futuras"}, 
+                                    'alternativa2' : {'opcionA' : "Verdadero", 'opcionB' : "Falso", 'opcionC' : "Depende de otros factores"}
                                   }, 
                     'pregunta4' : {
-                                    'alternativa0' : {'opcionA' : "pregunta4 alternativa0 opcionA", 'opcionB' : "pregunta4 alternativa0 opcionB", 'opcionC' : "pregunta4 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta4 alternativa1 opcionA", 'opcionB' : "pregunta4 alternativa1 opcionB", 'opcionC' : "pregunta4 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta4 alternativa2 opcionA", 'opcionB' : "pregunta4 alternativa2 opcionB", 'opcionC' : "pregunta4 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "Perjudica", 'opcionB' : "Beneficia", 'opcionC' : "Perjudica y beneficia en algunos casos"}, 
+                                    'alternativa1' : {'opcionA' : "Diseminación de enfermedades y problemas respiratorios", 'opcionB' : "Aumento de cáncer en la piel y lesiones oculares", 'opcionC' : "Todos los mencionados, entre otros"}, 
+                                    'alternativa2' : {'opcionA' : "Inviernos menos fríos en algunas regiones y el calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión", 'opcionB' : "Inviernos menos fríos en algunas regiones", 'opcionC' : "El calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión"}
                                   }, 
                     'pregunta5' : {
-                                    'alternativa0' : {'opcionA' : "pregunta5 alternativa0 opcionA", 'opcionB' : "pregunta5 alternativa0 opcionB", 'opcionC' : "pregunta5 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta5 alternativa1 opcionA", 'opcionB' : "pregunta5 alternativa1 opcionB", 'opcionC' : "pregunta5 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta5 alternativa2 opcionA", 'opcionB' : "pregunta5 alternativa2 opcionB", 'opcionC' : "pregunta5 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "Aumentaron", 'opcionB' : "Disminuyeron", 'opcionC' : "No se vieron afectadas"}, 
+                                    'alternativa1' : {'opcionA' : "Aumentaron", 'opcionB' : "Disminuyeron", 'opcionC' : "No se vieron afectadas"}, 
+                                    'alternativa2' : {'opcionA' : "La esfera económica, las relaciones sociales, la cultura, la política nacional y las relaciones internacionales", 'opcionB' : "La esfera económica", 'opcionC' : "La esfera económica, las relaciones sociales y la cultura"}
                                   }, 
                     'pregunta6' : {
-                                    'alternativa0' : {'opcionA' : "pregunta6 alternativa0 opcionA", 'opcionB' : "pregunta6 alternativa0 opcionB", 'opcionC' : "pregunta6 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta6 alternativa1 opcionA", 'opcionB' : "pregunta6 alternativa1 opcionB", 'opcionC' : "pregunta6 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta6 alternativa2 opcionA", 'opcionB' : "pregunta6 alternativa2 opcionB", 'opcionC' : "pregunta6 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "un aumento de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 'opcionB' : "una bajada de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 'opcionC' : "un aumento de la densidad de población pero sin exposicion a extremos climáticos en las costas"}, 
+                                    'alternativa1' : {'opcionA' : "Aquellos con poca diversificacion economica", 'opcionB' : "Aquellos con economias diversificadas", 'opcionC' : "Aquellos con poca diversificación económica, y en los que un elevado porcentaje de la renta proviene del sector primario sensible al clima"}, 
+                                    'alternativa2' : {'opcionA' : "Isla de Pascua (Chile)", 'opcionB' : "Islas Galápagos (Ecuador)", 'opcionC' : "Isla del Sol (Bolivia)"}
                                   },
                     'pregunta7' : {
-                                    'alternativa0' : {'opcionA' : "pregunta7 alternativa0 opcionA", 'opcionB' : "pregunta7 alternativa0 opcionB", 'opcionC' : "pregunta7 alternativa0 opcionC"}, 
-                                    'alternativa1' : {'opcionA' : "pregunta7 alternativa1 opcionA", 'opcionB' : "pregunta7 alternativa1 opcionB", 'opcionC' : "pregunta7 alternativa1 opcionC"}, 
-                                    'alternativa2' : {'opcionA' : "pregunta7 alternativa2 opcionA", 'opcionB' : "pregunta7 alternativa2 opcionB", 'opcionC' : "pregunta7 alternativa2 opcionC"}
+                                    'alternativa0' : {'opcionA' : "Continuar utilizando combustibles fosiles", 'opcionB' : "Aun no se conoce ningun modelo alternativo que no contribuya al cambio climatico", 'opcionC' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas"}, 
+                                    'alternativa1' : {'opcionA' : "El Protocolo de Kioto", 'opcionB' : "El Protocolo Kansai", 'opcionC' : "El Protocolo Kisawa"}, 
+                                    'alternativa2' : {'opcionA' : "50", 'opcionB' : "150", 'opcionC' : "Mas de 150"}
                                   }
                  }
 respuestasExamen = {
                         'pregunta1' : {
-                                        'alternativa0' : "pregunta1 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta1 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta1 alternativa2 opcionA"
+                                        'alternativa0' : "Rapidez e intensidad", 
+                                        'alternativa1' : "Dióxido de carbono, Metano y Óxidos de nitrógeno", 
+                                        'alternativa2' : "0, 7º C"
                                       }, 
                         'pregunta2' : {
-                                        'alternativa0' : "pregunta2 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta2 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta2 alternativa2 opcionA"
+                                        'alternativa0' : "El petróleo, el gas natural y el carbón", 
+                                        'alternativa1' : "30%", 
+                                        'alternativa2' : "53 %"
                                       }, 
                         'pregunta3' : {
-                                        'alternativa0' : "pregunta3 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta3 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta3 alternativa2 opcionA"         
+                                        'alternativa0' : "Un hecho social", 
+                                        'alternativa1' : "Todos sus ecosistemas y a todas sus sociedades, incluyendo las generaciones futuras", 
+                                        'alternativa2' : "Verdadero"         
                                       }, 
                         'pregunta4' : {
-                                        'alternativa0' : "pregunta4 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta4 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta4 alternativa2 opcionA"
+                                        'alternativa0' : "Perjudica y beneficia en algunos casos", 
+                                        'alternativa1' : "Todos los mencionados, entre otros", 
+                                        'alternativa2' : "Inviernos menos fríos en algunas regiones y el calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión"
                                       }, 
                         'pregunta5' : {
-                                        'alternativa0' : "pregunta5 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta5 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta5 alternativa2 opcionA"
+                                        'alternativa0' : "Aumentaron", 
+                                        'alternativa1' : "Disminuyeron", 
+                                        'alternativa2' : "La esfera económica, las relaciones sociales, la cultura, la política nacional y las relaciones internacionales"
                                       }, 
                         'pregunta6' : {
-                                        'alternativa0' : "pregunta6 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta6 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta6 alternativa2 opcionA"
+                                        'alternativa0' : "un aumento de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 
+                                        'alternativa1' : "Aquellos con poca diversificación económica, y en los que un elevado porcentaje de la renta proviene del sector primario sensible al clima", 
+                                        'alternativa2' : "Isla del Sol (Bolivia)"
                                       },
                         'pregunta7' : {
-                                        'alternativa0' : "pregunta7 alternativa0 opcionA", 
-                                        'alternativa1' : "pregunta7 alternativa1 opcionA", 
-                                        'alternativa2' : "pregunta7 alternativa2 opcionA"
+                                        'alternativa0' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas", 
+                                        'alternativa1' : "El Protocolo Kansai", 
+                                        'alternativa2' : "Mas de 150"
                                       }
                    }
 

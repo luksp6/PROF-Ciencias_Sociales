@@ -22,15 +22,15 @@
 
 #5-	¿Cuánto creció el consumo energético mundial en las 2 últimas décadas?     
 ##a- < 30%
-##b-	30%
-##c-	> 30%
+##b-	40%
+##c-	> 25%
 
 
 
-#6-	¿Cuánto se prevé que aumentara el consumo energético un crecimiento de aquí al 2030?
+#6-	¿Cuánto se prevé que aumentara el consumo energético de aquí al 2030?
 ##a-	< 53 %
-##b-	53 %
-##c-	> 53 %
+##b-	48%
+##c-	> 67%
 
 
 
@@ -39,17 +39,17 @@
 #7-	El cambio climático es
 ##a-	Un hecho social
 ##b-	Un hecho ambiental
-##b-    un hecho economico
+##b-    Un hecho economico
 
 #8-	El cambio climático afecta a…
-##a-	todos sus ecosistemas y a todas sus sociedades, incluyendo las generaciones futuras
+##a-	Todos sus ecosistemas y a todas sus sociedades, incluyendo las generaciones futuras
 ##b-	Solo las sociedades
 ##c-	Generaciones futuras
 
 #9-	¿El cambio climático también es consecuencia de la velocidad del cambio social en las sociedades contemporáneas que afecta?
 ##a-	Verdadero 
 ##b-	Falso
-##c-    Depende
+##c-    Depende de otros factores
 
 ##El impacto en la salud humana
 
@@ -58,38 +58,38 @@
 ##b-	Beneficia
 ##c-	Perjudica y beneficia en algunos casos
 
-#11-	Además de olas de calor, la cual provocó la muerte de muchas personas. ¿Que tras consecuencias hubo por el cambio climático?
+#11-	Además de olas de calor, las cuales provocaron la muerte de muchas personas. ¿Que otras consecuencias hubo por el cambio climático?
 ##a-	Diseminación de enfermedades y problemas respiratorios
 ##b-	Aumento de cáncer en la piel y lesiones oculares
-##c-	Todos los mencionados entre otros
+##c-	Todos los mencionados, entre otros
 
-#12-	Pero el cambio climático también producirá algunas mejoras: 
-##a-	inviernos menos fríos en algunas regiones y el calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión
-##b-	inviernos menos fríos en algunas regiones
-##c-	el calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión
+#12-	Potenciales beneficios para la salud causados por el cambio climatico: 
+##a-	Inviernos menos fríos en algunas regiones y el calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión
+##b-	Inviernos menos fríos en algunas regiones
+##c-	El calentamiento y las sequías que en algunas zonas pueden disminuir el ciclo vital de los mosquitos y su periodo de transmisión
 
 ##El impacto demográfico
-#13-	Las migraciones internacionales
-##a-	Aumetaron
+#13-	Las migraciones internacionales:
+##a-	Aumentaron
 ##b-	Disminuyeron
 ##c-	No se vieron afectadas
 
 #14-    Las migraciones dentro de un pais:
 ##a-    Aumentaron
 ##b-    Disminuyeron
-##c-    No se vieron aferctadas
+##c-    No se vieron afectadas
 
-#15-	El/los impactos inmediatos de las migraciones se manifiestan en
-##a-	la esfera económica, pero también en las relaciones sociales, la cultura, la política nacional y las relaciones internacionales.
-##b-	la esfera económica
-##c-	la esfera económica, pero también en las relaciones sociales, la cultura
+#15-	El/los impactos inmediatos de las migraciones se manifiestan en:
+##a-	La esfera económica, las relaciones sociales, la cultura, la política nacional y las relaciones internacionales
+##b-	La esfera económica
+##c-	La esfera económica, las relaciones sociales y la cultura
 
 
 
 
 ##El impacto en la organización social: estructura social y política, conflictos, normas y valores sociales
 
-#16-	Existen también testimonios que corroboran el colapso de civilizaciones por razones medioambientales a los que no quisieron o no supieron adaptarse, ¿cuál sería un ejemplo?
+#16-	Existen testimonios que corroboran el colapso de civilizaciones por razones medioambientales a los que no quisieron o no supieron adaptarse, ¿cuál sería un ejemplo?
 ##a-	Isla de Pascua (Chile)
 ##b-	Islas Galápagos (Ecuador) 
 ##c-	Isla del Sol (Bolivia)
