@@ -25,11 +25,11 @@ materia = {
           }
 
 respuestasConsultas = { 
-                        'consulta problema' : {1 : "Respuesta problema 1", 2 : "Respuesta problema 2", 3 : "Respuesta problema 3"},
-                        'consulta causas' : {1 : "Respuesta causas 1", 2 : "Respuesta causas 2", 3 : "Respuesta causas 3"},
-                        'consulta impacto social' : {1 : "Respuesta impacto social 1", 2 : "Respuesta impacto social 2", 3 : "Respuesta impacto social 3"},
-                        'consulta impacto salud' : {1 : "Respuesta impacto salud 1", 2 : "Respuesta impacto salud 2", 3 : "Respuesta impacto salud 3"},
-                        'consulta impacto demografico' : {1 : "Respuesta impacto demografico 1", 2 : "Respuesta impacto demografico 2", 3 : "Respuesta impacto demografico 3"},
+                        'consulta problema' : {1 : "Respuesta problema 1", 2 : "https://imgur.com/ecmNey1", 3 : "Respuesta problema 3"},
+                        'consulta causas' : {1 : "Respuesta causas 1", 2 : "https://imgur.com/nDNkpCN", 3 : "Respuesta causas 3"},
+                        'consulta impacto social' : {1 : "Respuesta impacto social 1", 2 : "https://imgur.com/BzYkJdv", 3 : "Respuesta impacto social 3"},
+                        'consulta impacto salud' : {1 : "Respuesta impacto salud 1", 2 : "https://imgur.com/33bcdvm", 3 : "Respuesta impacto salud 3"},
+                        'consulta impacto demografico' : {1 : "Respuesta impacto demografico 1", 2 : "https://imgur.com/QALMpBJ", 3 : "Respuesta impacto demografico 3"},
                         'consulta impacto economico' : {1 : "Respuesta impacto economico 1", 2 : "Respuesta impacto economico 2", 3 : "Respuesta impacto economico 3"},
                         'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"}
                       }
