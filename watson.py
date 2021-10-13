@@ -11,16 +11,16 @@ import sys
 import random
 
 alumnos = { 
-            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Pablo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
-            'Luis' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Mateo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Florencia' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
+            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Pablo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
+            'Luis' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Mateo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Florencia' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
           }
 
 
 materia = {
-                'temas_materia' : "Los temas de nuestra clase son: \n | El problema del cambio climático. \n | Las causas del cambio climático. \n | El impacto social del cambio climático. \n | El impacto en la salud humana del cambio climático. \n | El impacto demográfico del cambio climático. \n | El impacto económico del cambio climático. \n | Las soluciones al problema del cambio climático. ", 
+                'temas_materia' : "Los temas de nuestra clase son: \n | El problema del cambio climático. \n | Las causas del cambio climático. \n | El impacto social del cambio climático. \n | El impacto en la salud humana del cambio climático. \n | El impacto demográfico del cambio climático. \n | El impacto económico del cambio climático. \n | El impacto en la organizacion social del cambio climatico \n | Las soluciones al problema del cambio climático. ", 
                 'bibliografia' : "| Fuente: Pardo Buendía, M. (2007). El impacto social del cambio climático. \n | Link: https://e-archivo.uc3m.es/bitstream/handle/10016/10448/impacto_pardo_2007.pdf?sequence=1&isAllowed=y"
           }
 
@@ -30,11 +30,12 @@ respuestasConsultas = {
                         'consulta impacto social' : {1 : "Respuesta impacto social 1", 2 : "https://imgur.com/BzYkJdv", 3 : "Respuesta impacto social 3"},
                         'consulta impacto salud' : {1 : "Respuesta impacto salud 1", 2 : "https://imgur.com/33bcdvm", 3 : "Respuesta impacto salud 3"},
                         'consulta impacto demografico' : {1 : "Respuesta impacto demografico 1", 2 : "https://imgur.com/QALMpBJ", 3 : "Respuesta impacto demografico 3"},
-                        'consulta impacto economico' : {1 : "Respuesta impacto economico 1", 2 : "Respuesta impacto economico 2", 3 : "Respuesta impacto economico 3"},
+                        'consulta impacto economico' : {1 : "Respuesta impacto economico 1", 2 : "https://imgur.com/Joe3cq2", 3 : "Respuesta impacto economico 3"},
+                        'consulta impacto en la organizacion social ' : {1 : "Respuesta impacto en la organizacion social  1", 2 : "https://imgur.com/7L520XK", 3 : "Respuesta impacto en la organizacion social 3"},
                         'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"}
                       }
 
-CANTIDAD_PREGUNTAS_EXAMEN = 7
+CANTIDAD_PREGUNTAS_EXAMEN = 8
 CANTIDAD_PREGUNTAS_EXAMEN_TEMA = 3
 
 def agregarAlumno(alumnoNuevo) :
@@ -47,6 +48,7 @@ def agregarAlumno(alumnoNuevo) :
                     'cantidad consulta impacto salud' : 0, 
                     'cantidad consulta impacto demografico' : 0, 
                     'cantidad consulta impacto economico' : 0,
+                    'cantidad consulta impacto organizacion social' : 0,
                     'cantidad consulta solucion' : 0,
                     'promedio entendimiento' : 1, 
                     'examenes intentados' : 0, 
@@ -85,13 +87,18 @@ preguntasExamen = {
                     'pregunta6' : {
                                     'alternativa0' : "La rápida urbanización de zonas bajas costeras, tanto en el mundo económicamente desarrollado como en el mundo empobrecido, está produciendo:", 
                                     'alternativa1' : "¿Que asentamientos humanos son mas vulnerables a los impactos del cambio climatico?",
-                                    'alternativa2' : "Existen testimonios que corroboran el colapso de civilizaciones por razones medioambientales a los que no quisieron o no supieron adaptarse, ¿cuál sería un ejemplo?"
+                                    'alternativa2' : "Un nuevo factor asociado al cambio climático seria…"
                                   },
                     'pregunta7' : {
                                     'alternativa0' : "¿Que cambio en el modelo energetico hegemonico seria propicio como solucion al cambio climatico?",
                                     'alternativa1' : "¿Cuál es un acuerdo mundial para la lucha del cambio climático?", 
                                     'alternativa2' : "¿Cuántos países firmaron el acuerdo mundial para la lucha del cambio climático?"
                                   }
+                    'pregunta8' : {
+                                    'alternativa0' : "¿Cuál sería una posible ayuda al problema?",
+                                    'alternativa1' : "Según El Libro Verde sobre la Energía de la Unión Europea (2006) documenta que se podría ahorrar energía. ¿Cuánto seria considerando el tipo de energía mencionado en el item 21?", 
+                                    'alternativa2' : "Una solución al problema del cambio climático, seria cumplir con los objetivos que se tasaron en el protocolo de Kioto. ¿Qué país no lo cumplió?"
+                                  }              
                   }
                   
 opcionesExamen = {
@@ -102,8 +109,8 @@ opcionesExamen = {
                                   }, 
                     'pregunta2' : {
                                     'alternativa0' : {'opcionA' : "El petróleo, el gas natural y el carbón", 'opcionB' : "El petroleo y el gas natural", 'opcionC' : "El carbon y el petroleo"}, 
-                                    'alternativa1' : {'opcionA' : "30%", 'opcionB' : "40%", 'opcionC' : "25%"}, 
-                                    'alternativa2' : {'opcionA' : "48%", 'opcionB' : "53%", 'opcionC' : "67%"}
+                                    'alternativa1' : {'opcionA' : "< 30%", 'opcionB' : "30%", 'opcionC' : "> 30%"}, 
+                                    'alternativa2' : {'opcionA' : "< 53%", 'opcionB' : "53%", 'opcionC' : "> 53%"}
                                   }, 
                     'pregunta3' : {
                                     'alternativa0' : {'opcionA' : "Un hecho social", 'opcionB' : "Un hecho ambiental", 'opcionC' : "Un hecho economico"}, 
@@ -121,15 +128,20 @@ opcionesExamen = {
                                     'alternativa2' : {'opcionA' : "La esfera económica, las relaciones sociales, la cultura, la política nacional y las relaciones internacionales", 'opcionB' : "La esfera económica", 'opcionC' : "La esfera económica, las relaciones sociales y la cultura"}
                                   }, 
                     'pregunta6' : {
-                                    'alternativa0' : {'opcionA' : "un aumento de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 'opcionB' : "una bajada de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 'opcionC' : "un aumento de la densidad de población pero sin exposicion a extremos climáticos en las costas"}, 
+                                    'alternativa0' : {'opcionA' : "Inundaciones y movimientos de tierra", 'opcionB' : "Terremotos y tsunamis", 'opcionC' : "Erupciones y hambruna"}, 
                                     'alternativa1' : {'opcionA' : "Aquellos con poca diversificacion economica", 'opcionB' : "Aquellos con economias diversificadas", 'opcionC' : "Aquellos con poca diversificación económica, y en los que un elevado porcentaje de la renta proviene del sector primario sensible al clima"}, 
-                                    'alternativa2' : {'opcionA' : "Isla de Pascua (Chile)", 'opcionB' : "Islas Galápagos (Ecuador)", 'opcionC' : "Isla del Sol (Bolivia)"}
+                                    'alternativa2' : {'opcionA' : "La proliferación de hippocampus", 'opcionB' : "La proliferación de cangrejos", 'opcionC' : "La proliferación de medusas"}
                                   },
                     'pregunta7' : {
                                     'alternativa0' : {'opcionA' : "Continuar utilizando combustibles fosiles", 'opcionB' : "Aun no se conoce ningun modelo alternativo que no contribuya al cambio climatico", 'opcionC' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas"}, 
                                     'alternativa1' : {'opcionA' : "El Protocolo de Kioto", 'opcionB' : "El Protocolo Kansai", 'opcionC' : "El Protocolo Kisawa"}, 
                                     'alternativa2' : {'opcionA' : "50", 'opcionB' : "150", 'opcionC' : "Mas de 150"}
                                   }
+                    'pregunta8' : {
+                                    'alternativa0' : {'opcionA' : "Energias renovables", 'opcionB' : "Energia no renovables", 'opcionC' : "Ninguna de las anteriores"}, 
+                                    'alternativa1' : {'opcionA' : "20 % del consumo de energía actual.", 'opcionB' : "10% del consumo de energía actual.", 'opcionC' : "30 % del consumo de energía actual."}, 
+                                    'alternativa2' : {'opcionA' : "Estados Unidos y España", 'opcionB' : "Canadá y Japón", 'opcionC' : "Todas las anteriores"}
+                                  }              
                  }
 respuestasExamen = {
                         'pregunta1' : {
@@ -139,8 +151,8 @@ respuestasExamen = {
                                       }, 
                         'pregunta2' : {
                                         'alternativa0' : "El petróleo, el gas natural y el carbón", 
-                                        'alternativa1' : "30%", 
-                                        'alternativa2' : "53 %"
+                                        'alternativa1' : "> 30%", 
+                                        'alternativa2' : "53%"
                                       }, 
                         'pregunta3' : {
                                         'alternativa0' : "Un hecho social", 
@@ -158,15 +170,20 @@ respuestasExamen = {
                                         'alternativa2' : "La esfera económica, las relaciones sociales, la cultura, la política nacional y las relaciones internacionales"
                                       }, 
                         'pregunta6' : {
-                                        'alternativa0' : "un aumento de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 
+                                        'alternativa0' : "Inundaciones y movimientos de tierra", 
                                         'alternativa1' : "Aquellos con poca diversificación económica, y en los que un elevado porcentaje de la renta proviene del sector primario sensible al clima", 
-                                        'alternativa2' : "Isla de Pascua (Chile)"
+                                        'alternativa2' : "La proliferación de medusas"
                                       },
                         'pregunta7' : {
                                         'alternativa0' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas", 
                                         'alternativa1' : "El Protocolo Kioto", 
                                         'alternativa2' : "Mas de 150"
                                       }
+                        'pregunta8' : {
+                                        'alternativa0' : "Energias renovables", 
+                                        'alternativa1' : "20 % del consumo de energía actual.", 
+                                        'alternativa2' : "Todas las anteriores"
+                                      }              
                    }
 
 def generarEvaluacion():
@@ -177,6 +194,7 @@ def generarEvaluacion():
     p5 = random.choice(list(preguntasExamen['pregunta5'].keys()))
     p6 = random.choice(list(preguntasExamen['pregunta6'].keys()))
     p7 = random.choice(list(preguntasExamen['pregunta7'].keys()))
+    p8 = random.choice(list(preguntasExamen['pregunta8'].keys()))
     return {
                 'pregunta1' : {'pregunta' : preguntasExamen['pregunta1'][p1], 'opciones' : opcionesExamen['pregunta1'][p1], 'respuesta' : respuestasExamen['pregunta1'][p1]}, 
                 'pregunta2' : {'pregunta' : preguntasExamen['pregunta2'][p2], 'opciones' : opcionesExamen['pregunta2'][p2], 'respuesta' : respuestasExamen['pregunta2'][p2]}, 
@@ -184,7 +202,8 @@ def generarEvaluacion():
                 'pregunta4' : {'pregunta' : preguntasExamen['pregunta4'][p4], 'opciones' : opcionesExamen['pregunta4'][p4], 'respuesta' : respuestasExamen['pregunta4'][p4]}, 
                 'pregunta5' : {'pregunta' : preguntasExamen['pregunta5'][p5], 'opciones' : opcionesExamen['pregunta5'][p5], 'respuesta' : respuestasExamen['pregunta5'][p5]}, 
                 'pregunta6' : {'pregunta' : preguntasExamen['pregunta6'][p6], 'opciones' : opcionesExamen['pregunta6'][p6], 'respuesta' : respuestasExamen['pregunta6'][p6]},
-                'pregunta7' : {'pregunta' : preguntasExamen['pregunta7'][p7], 'opciones' : opcionesExamen['pregunta7'][p7], 'respuesta' : respuestasExamen['pregunta7'][p7]}
+                'pregunta7' : {'pregunta' : preguntasExamen['pregunta7'][p7], 'opciones' : opcionesExamen['pregunta7'][p7], 'respuesta' : respuestasExamen['pregunta7'][p7]},
+                'pregunta8' : {'pregunta' : preguntasExamen['pregunta8'][p8], 'opciones' : opcionesExamen['pregunta8'][p8], 'respuesta' : respuestasExamen['pregunta8'][p8]}
            }
 
 def buenConcepto(alum):
@@ -206,8 +225,8 @@ def corregirRespuestas(respuestas, examen):
             correccionResp[llavePregunta] = "Respuesta " + repr(j) + ": INCORRECTA."
     return correccionResp
     
-def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6, rta7):
-    correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6, rta7], examen)
+def corregirEvaluacion(alum, examen, rta1, rta2, rta3, rta4, rta5, rta6, rta7, rta8): #aca hay que tocar
+    correccion = corregirRespuestas([rta1, rta2, rta3, rta4, rta5, rta6, rta7, rta8], examen)
     if correccion['cont'] < CANTIDAD_PREGUNTAS_EXAMEN-2:
        correccion['devolucion'] = "No te desanimes " + alum + ", a seguir estudiando."
     else:
@@ -245,8 +264,10 @@ def generarEvaluacionTema(tema):
         llave = 'pregunta5'
     if tema == 'consulta impacto economico':
         llave = 'pregunta6'
-    if tema == 'consulta solucion':
+    if tema == 'impacto organizacion social':
         llave = 'pregunta7'
+    if tema == 'consulta solucion'
+        llave = 'pregunta8'
     return {
                 'pregunta1' : {'pregunta' : preguntasExamen[llave]['alternativa0'], 'opciones' : opcionesExamen[llave]['alternativa0'], 'respuesta' : respuestasExamen[llave]['alternativa0']}, 
                 'pregunta2' : {'pregunta' : preguntasExamen[llave]['alternativa1'], 'opciones' : opcionesExamen[llave]['alternativa1'], 'respuesta' : respuestasExamen[llave]['alternativa1']}, 
@@ -273,7 +294,7 @@ def consulta(alum, llaveConsulta, tipoConsulta, contador):
     alumnos[alum][llaveConsulta] += 1
     if alumnos[alum]['ultimaConsulta'] != tipoConsulta:
         alumnos[alum]['ultimaConsulta'] = tipoConsulta
-        contador = 1 #se iniciaria en uno?
+        contador = 1 
     if contador > 1 and contador <= 3:
         respuesta = {'message' : respuestasConsultas[tipoConsulta][contador], "entiende" : contador}
     elif contador > 3:
@@ -332,4 +353,4 @@ def main(dict):
             return dict['examen'][llavePregunta]
         if dict['evaluacion'] == CANTIDAD_PREGUNTAS_EXAMEN + 1:
             correccion = corregirEvaluacion(dict['nombre'], dict['examen'], dict['rta1'], dict['rta2'], dict['rta3'], dict['rta4'], dict['rta5'], dict['rta6'], dict['rta7'])
-            return {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['devolucion']}
+            return {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['pregunta7'] + "\n" + correccion['devolucion']}

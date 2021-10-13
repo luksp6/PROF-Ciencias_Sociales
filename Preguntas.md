@@ -85,8 +85,6 @@
 ##c-	La esfera económica, las relaciones sociales y la cultura
 
 
-
-
 ##El impacto en la organización social: estructura social y política, conflictos, normas y valores sociales
 
 #16-	Existen testimonios que corroboran el colapso de civilizaciones por razones medioambientales a los que no quisieron o no supieron adaptarse, ¿cuál sería un ejemplo?
