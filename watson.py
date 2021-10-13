@@ -160,11 +160,11 @@ respuestasExamen = {
                         'pregunta6' : {
                                         'alternativa0' : "un aumento de la densidad de población y de los bienes humanos expuestos a extremos climáticos en las costas", 
                                         'alternativa1' : "Aquellos con poca diversificación económica, y en los que un elevado porcentaje de la renta proviene del sector primario sensible al clima", 
-                                        'alternativa2' : "Isla del Sol (Bolivia)"
+                                        'alternativa2' : "Isla de Pascua (Chile)"
                                       },
                         'pregunta7' : {
                                         'alternativa0' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas", 
-                                        'alternativa1' : "El Protocolo Kansai", 
+                                        'alternativa1' : "El Protocolo Kioto", 
                                         'alternativa2' : "Mas de 150"
                                       }
                    }
