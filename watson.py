@@ -11,11 +11,11 @@ import sys
 import random
 
 alumnos = { 
-            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Pablo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
-            'Luis' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Mateo' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
-            'Florencia' : {'cantidadConsultas' : 0, 'ultimaConsulta' : None, 'cantidad consulta problema' : 0, 'cantidad consulta causas' : 0, 'cantidad consulta impacto social' : 0, 'cantidad consulta impacto salud' : 0, 'cantidad consulta impacto demografico' : 0, 'cantidad consulta impacto economico' : 0, 'cantidad consulta impacto organizacion social' : 0, 'cantidad consulta solucion' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
+            'Lucas' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "el problema del cambio climatico' : 0, 'cantidad las causas del cambio climatico", 'cantidad el problema del cambio climatico' : 0, 'cantidad las causas del cambio climatico' : 0, 'cantidad el impacto social del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la salud' : 0, 'cantidad el impacto demografico del cambio climatico' : 0, 'cantidad el impacto economico del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la organizacion social' : 0, 'cantidad la solucion al problema del cambio climatico' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Pablo' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad el problema del cambio climatico' : 0, 'cantidad las causas del cambio climatico' : 0, 'cantidad el impacto social del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la salud' : 0, 'cantidad el impacto demografico del cambio climatico' : 0, 'cantidad el impacto economico del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la organizacion social' : 0, 'cantidad la solucion al problema del cambio climatico' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
+            'Luis' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad el problema del cambio climatico' : 0, 'cantidad las causas del cambio climatico' : 0, 'cantidad el impacto social del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la salud' : 0, 'cantidad el impacto demografico del cambio climatico' : 0, 'cantidad el impacto economico del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la organizacion social' : 0, 'cantidad la solucion al problema del cambio climatico' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Mateo' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad el problema del cambio climatico' : 0, 'cantidad las causas del cambio climatico' : 0, 'cantidad el impacto social del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la salud' : 0, 'cantidad el impacto demografico del cambio climatico' : 0, 'cantidad el impacto economico del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la organizacion social' : 0, 'cantidad la solucion al problema del cambio climatico' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0}, 
+            'Florencia' : {'cantidadConsultas' : 1, 'ultimaConsulta' : "consulta causas", 'cantidad el problema del cambio climatico' : 0, 'cantidad las causas del cambio climatico' : 0, 'cantidad el impacto social del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la salud' : 0, 'cantidad el impacto demografico del cambio climatico' : 0, 'cantidad el impacto economico del cambio climatico' : 0, 'cantidad el impacto del cambio climatico en la organizacion social' : 0, 'cantidad la solucion al problema del cambio climatico' : 0, 'promedio entendimiento' : 1, 'examenes intentados' : 0, 'examenes aprobados' : 0, 'promedio errores examen' : 0, 'cantidad entradas chat' : 0},
           }
 
 
@@ -25,14 +25,14 @@ materia = {
           }
 
 respuestasConsultas = { 
-                        'consulta problema' : {1 : "Respuesta problema 1", 2 : "https://imgur.com/ecmNey1", 3 : "Respuesta problema 3"},
-                        'consulta causas' : {1 : "Respuesta causas 1", 2 : "https://imgur.com/nDNkpCN", 3 : "Respuesta causas 3"},
-                        'consulta impacto social' : {1 : "Respuesta impacto social 1", 2 : "https://imgur.com/BzYkJdv", 3 : "Respuesta impacto social 3"},
-                        'consulta impacto salud' : {1 : "Respuesta impacto salud 1", 2 : "https://imgur.com/33bcdvm", 3 : "Respuesta impacto salud 3"},
-                        'consulta impacto demografico' : {1 : "Respuesta impacto demografico 1", 2 : "https://imgur.com/QALMpBJ", 3 : "Respuesta impacto demografico 3"},
-                        'consulta impacto economico' : {1 : "Respuesta impacto economico 1", 2 : "https://imgur.com/Joe3cq2", 3 : "Respuesta impacto economico 3"},
-                        'consulta impacto en la organizacion social ' : {1 : "Respuesta impacto en la organizacion social  1", 2 : "https://imgur.com/7L520XK", 3 : "Respuesta impacto en la organizacion social 3"},
-                        'consulta solucion' : {1 : "Respuesta solucion 1", 2 : "Respuesta solucion 2", 3 : "Respuesta solucion 3"}
+                        'el problema del cambio climatico' : {1 : "Respuesta problema 1", 2 : "https://imgur.com/ecmNey1", 3 : "Respuesta problema 3"},
+                        'las causas del cambio climatico' : {1 : "Respuesta causas 1", 2 : "https://imgur.com/nDNkpCN", 3 : "Respuesta causas 3"},
+                        'el impacto social del cambio climatico' : {1 : "Respuesta impacto social 1", 2 : "https://imgur.com/BzYkJdv", 3 : "Respuesta impacto social 3"},
+                        'el impacto del cambio climatico en la salud' : {1 : "Respuesta impacto salud 1", 2 : "https://imgur.com/33bcdvm", 3 : "Respuesta impacto salud 3"},
+                        'el impacto demografico del cambio climatico' : {1 : "Respuesta impacto demografico 1", 2 : "https://imgur.com/QALMpBJ", 3 : "Respuesta impacto demografico 3"},
+                        'el impacto economico del cambio climatico' : {1 : "Respuesta impacto economico 1", 2 : "https://imgur.com/Joe3cq2", 3 : "Respuesta impacto economico 3"},
+                        'el impacto del cambio climatico en la organizacion social' : {1 : "Respuesta impacto en la organizacion social  1", 2 : "https://imgur.com/7L520XK", 3 : "Respuesta impacto en la organizacion social 3"},
+                        'la solucion al problema del cambio climatico' : {1 : "Respuesta solucion 1", 2 : "https://imgur.com/2DA57dO", 3 : "Respuesta solucion 3"}
                       }
 
 CANTIDAD_PREGUNTAS_EXAMEN = 8
@@ -42,14 +42,14 @@ def agregarAlumno(alumnoNuevo) :
     perfilNuevo = {
                     'cantidadConsultas' : 0, 
                     'ultimaConsulta' : None,
-                    'cantidad consulta problema' : 0,
-                    'cantidad consulta causas' : 0,
-                    'cantidad consulta impacto social' : 0,
-                    'cantidad consulta impacto salud' : 0, 
-                    'cantidad consulta impacto demografico' : 0, 
-                    'cantidad consulta impacto economico' : 0,
-                    'cantidad consulta impacto organizacion social' : 0,
-                    'cantidad consulta solucion' : 0,
+                    'cantidad el problema del cambio climatico' : 0,
+                    'cantidad las causas del cambio climatico' : 0,
+                    'cantidad el impacto social del cambio climatico' : 0,
+                    'cantidad el impacto del cambio climatico en la salud' : 0, 
+                    'cantidad el impacto demografico del cambio climatico' : 0, 
+                    'cantidad el impacto economico del cambio climatico' : 0,
+                    'cantidad el impacto del cambio climatico en la organizacion social' : 0,
+                    'cantidad la solucion al problema del cambio climatico' : 0,
                     'promedio entendimiento' : 1, 
                     'examenes intentados' : 0, 
                     'examenes aprobados' : 0, 
@@ -93,7 +93,7 @@ preguntasExamen = {
                                     'alternativa0' : "¿Que cambio en el modelo energetico hegemonico seria propicio como solucion al cambio climatico?",
                                     'alternativa1' : "¿Cuál es un acuerdo mundial para la lucha del cambio climático?", 
                                     'alternativa2' : "¿Cuántos países firmaron el acuerdo mundial para la lucha del cambio climático?"
-                                  }
+                                  },
                     'pregunta8' : {
                                     'alternativa0' : "¿Cuál sería una posible ayuda al problema?",
                                     'alternativa1' : "Según El Libro Verde sobre la Energía de la Unión Europea (2006) documenta que se podría ahorrar energía. ¿Cuánto seria considerando el tipo de energía mencionado en el item 21?", 
@@ -136,7 +136,7 @@ opcionesExamen = {
                                     'alternativa0' : {'opcionA' : "Continuar utilizando combustibles fosiles", 'opcionB' : "Aun no se conoce ningun modelo alternativo que no contribuya al cambio climatico", 'opcionC' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas"}, 
                                     'alternativa1' : {'opcionA' : "El Protocolo de Kioto", 'opcionB' : "El Protocolo Kansai", 'opcionC' : "El Protocolo Kisawa"}, 
                                     'alternativa2' : {'opcionA' : "50", 'opcionB' : "150", 'opcionC' : "Mas de 150"}
-                                  }
+                                  },
                     'pregunta8' : {
                                     'alternativa0' : {'opcionA' : "Energias renovables", 'opcionB' : "Energia no renovables", 'opcionC' : "Ninguna de las anteriores"}, 
                                     'alternativa1' : {'opcionA' : "20 % del consumo de energía actual.", 'opcionB' : "10% del consumo de energía actual.", 'opcionC' : "30 % del consumo de energía actual."}, 
@@ -178,7 +178,7 @@ respuestasExamen = {
                                         'alternativa0' : "Cambiar a un modelo donde las energias renovables, limpias, y sostenidas sean protagonistas", 
                                         'alternativa1' : "El Protocolo Kioto", 
                                         'alternativa2' : "Mas de 150"
-                                      }
+                                      },
                         'pregunta8' : {
                                         'alternativa0' : "Energias renovables", 
                                         'alternativa1' : "20 % del consumo de energía actual.", 
@@ -252,21 +252,21 @@ def corregirEvaluacionTema(alum, examen, rta1, rta2, rta3):
     return correccion
 
 def generarEvaluacionTema(tema):
-    if tema == 'consulta problema':
+    if tema == 'el problema del cambio climatico':
         llave = 'pregunta1'
-    if tema == 'consulta causas':
+    if tema == 'las causas del cambio climatico':
         llave = 'pregunta2'
-    if tema == 'consulta impacto social':
+    if tema == 'el impacto social del cambio climatico':
         llave = 'pregunta3'
-    if tema == 'consulta impacto salud':
+    if tema == 'el impacto del cambio climatico en la salud':
         llave = 'pregunta4'
-    if tema == 'consulta impacto demografico':
+    if tema == 'el impacto demografico del cambio climatico':
         llave = 'pregunta5'
-    if tema == 'consulta impacto economico':
+    if tema == 'el impacto economico del cambio climatico':
         llave = 'pregunta6'
-    if tema == 'impacto organizacion social':
+    if tema == 'el impacto del cambio climatico en la organizacion social':
         llave = 'pregunta7'
-    if tema == 'consulta solucion'
+    if tema == 'la solucion al problema del cambio climatico':
         llave = 'pregunta8'
     return {
                 'pregunta1' : {'pregunta' : preguntasExamen[llave]['alternativa0'], 'opciones' : opcionesExamen[llave]['alternativa0'], 'respuesta' : respuestasExamen[llave]['alternativa0']}, 
@@ -282,7 +282,7 @@ def identificarse(alum):
 
 def ultimaConsulta(alum):
     if alumnos[alum]['ultimaConsulta'] != None:
-        return {'message' : alum + ", la ultima vez consultaste sobre: " +  alumnos[alum]['ultimaConsulta'] + "\n ¿querés hacer una evaluacion sobre ese tema en forma de repaso?"}
+        return {'message' : alum + ", la ultima vez consultaste sobre: " +  alumnos[alum]['ultimaConsulta']}
     else:
         return {'message' : alum + ", aun no has realizado ninguna consulta en esta clase"}
 
@@ -333,7 +333,10 @@ def main(dict):
         
     if dict['tipoConsulta'] != -1:
         llaveConsulta = "cantidad " + dict['tipoConsulta']
-        return consulta(dict['nombre'], llaveConsulta, dict['tipoConsulta'], dict['contadorNoEntiende']['valor'])
+        if not dict['tipoConsulta'] in respuestasConsultas.keys():
+            return {'message' : "Este topico no se encuentra entre los temas del curso. " + temas()['message']}
+        else:
+            return consulta(dict['nombre'], llaveConsulta, dict['tipoConsulta'], dict['contadorNoEntiende']['valor'])
     
     if dict['verificarEntendimiento'] == 1:
         return verificarEntendimiento(dict['nombre'], dict['entiende']['entiende'])
@@ -353,4 +356,4 @@ def main(dict):
             return dict['examen'][llavePregunta]
         if dict['evaluacion'] == CANTIDAD_PREGUNTAS_EXAMEN + 1:
             correccion = corregirEvaluacion(dict['nombre'], dict['examen'], dict['rta1'], dict['rta2'], dict['rta3'], dict['rta4'], dict['rta5'], dict['rta6'], dict['rta7'])
-            return {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['pregunta7'] + "\n" + correccion['devolucion']}
+            return {'message' : correccion['pregunta1'] + "\n" + correccion['pregunta2'] + "\n" + correccion['pregunta3'] + "\n" + correccion['pregunta4'] + "\n" + correccion['pregunta5'] + "\n" + correccion['pregunta6'] + "\n" + correccion['pregunta7'] + "\n" + correccion['pregunta8'] + "\n"+ correccion['devolucion']}
