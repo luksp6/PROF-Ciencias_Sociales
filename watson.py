@@ -323,7 +323,7 @@ def main(dict):
         
     if dict['evaluacionTema'] != -1:
         if dict['evaluacionTema'] == 0:
-            return generarEvaluacionTema(alumnos[dict['nombre']]['ultimaConsulta'])
+            return generarEvaluacionTema(dict['tipoConsulta'])
         if dict['evaluacionTema'] > 0 and dict['evaluacionTema'] <= CANTIDAD_PREGUNTAS_EXAMEN_TEMA:
             llavePregunta = "pregunta" + repr(dict['evaluacionTema'])
             return dict['examenTema'][llavePregunta]
